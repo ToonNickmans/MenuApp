@@ -6,39 +6,77 @@ body {
     color: #333;
 }
 
+/* ---- START: New and Updated Header Styles ---- */
+
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
+    display: flex; /* Enables Flexbox layout */
+    align-items: center; /* Vertically aligns items in the middle of the header */
+    /* justify-content: space-between; /* Uncomment this if you want logo left, title center, search right */
+    /* justify-content: flex-start; /* Default: items start from the left */
+    gap: 15px; /* Creates space between the logo, title, and search container */
+
+    background-color: #333; /* Your existing background color */
+    color: #fff; /* Your existing text color */
+    padding: 0.5em 1em; /* Adjust padding: 0.5em top/bottom, 1em left/right */
     position: sticky;
     top: 0;
     z-index: 1000;
+    /* text-align: center; /* Flexbox is now controlling alignment, so this might not be needed for direct children */
 }
 
-header h1 {
-    margin: 0;
+#header-logo {
+    height: 40px; /* Set the desired height for your logo */
+    width: auto;   /* Let the width adjust automatically to maintain aspect ratio */
+    /* To make the logo a circle, if it's square: */
+    /* border-radius: 50%; */
+    /* object-fit: contain; /* Ensures the logo fits well within the dimensions */
+}
+
+header h1 { /* Your existing store name styles */
+    margin: 0; /* Keep this to remove default margin */
+    font-size: 1.6em; /* You might want to adjust the font size */
+    /* To push the search bar to the far right, make the h1 take up available space: */
+    /* flex-grow: 1; */
+    /* text-align: left; /* Or 'center' if flex-grow is 1 and you want text centered in its space */
 }
 
 .search-container {
-    padding: 0.5em;
+    /* If you want the search bar to always be on the far right, and h1 doesn't use flex-grow: */
+    margin-left: auto;
+    /* padding: 0.5em; /* You might not need this if header padding is enough */
 }
 
-#searchInput {
+#searchInput { /* Your existing search input styles */
     padding: 0.5em;
-    width: 80%;
-    max-width: 400px;
+    width: 180px; /* You might need to adjust width */
+    max-width: 300px; /* Your existing max-width */
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
+/* ---- END: New and Updated Header Styles ---- */
+
+/*
+   The rest of your style.css (category-nav, menu-container, etc.)
+   remains the same unless you want to change it.
+*/
+
+/*
+   Check this existing rule for #category-nav:
+   If your header's height changed significantly, you might need to adjust the 'top' value below
+   so the category navigation bar still sticks correctly below the main header.
+   The original header padding was "1em 0", now it's "0.5em 1em" plus the logo.
+   A typical header height might now be around 50-70px.
+*/
 #category-nav {
     text-align: center;
     padding: 1em;
     background-color: #eee;
     border-bottom: 1px solid #ddd;
     position: sticky;
-    top: 75px; /* Adjust based on header height */
+    top: 60px; /* <<< POTENTIALLY ADJUST THIS VALUE based on your new header height.
+                     Try values between 55px and 80px depending on your logo/padding.
+                     Original was 75px. Test by scrolling. */
     z-index: 999;
 }
 
