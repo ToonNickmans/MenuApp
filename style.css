@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #ffffff; /* Your preference for white background */
     color: #333;
+    overscroll-behavior-y: contain; /* Added to prevent vertical overscroll bounce/effects */
 }
 
 /* ---- Header Styles ---- */
@@ -98,9 +99,9 @@ header h1#menu-title {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    /* Updated for slide and fade transitions */
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     touch-action: pan-y;
+    overscroll-behavior-x: contain; /* Added to prevent horizontal overscroll bounce/effects */
 }
 
 /* Optional: For initial load or specific fade-only transitions if script uses it */
@@ -108,7 +109,7 @@ header h1#menu-title {
     opacity: 0;
 }
 
-/* NEW Styles for Menu Slide Animations */
+/* Styles for Menu Slide Animations */
 .menu-slide-out-left {
     transform: translateX(-100%);
     opacity: 0;
@@ -142,31 +143,28 @@ header h1#menu-title {
 
 /* ---- Menu Items & Images ---- */
 .menu-item {
-    background-color: #fff; /* Was your preference, or use a light theme color */
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    /* Note: opacity/transform transitions here are for individual item effects,
-       distinct from the #menu-container's slide/fade transitions */
     opacity: 1;
     transform: scale(1);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* NEW Style for Menu Item Images */
 .menu-item-image {
     width: 100%;
-    max-height: 180px; /* Adjust as needed */
+    max-height: 180px;
     object-fit: cover;
-    border-radius: 6px 6px 0 0; /* Rounds top corners if image is first in card */
+    border-radius: 6px 6px 0 0;
     margin-bottom: 12px;
     display: block;
-    background-color: #f0f0f0; /* Placeholder background for images */
+    background-color: #f0f0f0;
 }
 
-.menu-item.hidden { /* This class is used by some older search filter logic if still present */
+.menu-item.hidden {
     opacity: 0;
     transform: scale(0.95);
     height: 0;
@@ -178,12 +176,12 @@ header h1#menu-title {
 
 .menu-item h3 {
     margin-top: 0;
-    color: #0056b3; /* Consider changing to your theme's primary or dark color */
+    color: #0056b3;
 }
 
 .menu-item .price {
     font-weight: bold;
-    color: #28a745; /* A distinct color for price is good */
+    color: #28a745;
     float: right;
 }
 
@@ -191,7 +189,7 @@ header h1#menu-title {
     margin-bottom: 0;
     font-size: 0.9em;
     color: #666;
-    clear: both; /* Ensures description is below floated price if name is short */
+    clear: both;
 }
 
 /* ---- Footer ---- */
