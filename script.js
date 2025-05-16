@@ -135,4 +135,127 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- 4. DISPLAY CURRENT MENU (Handles Animations
+    // --- 4. DISPLAY CURRENT MENU (Handles Animations, Calls Content Population) ---
+    function displayCurrentMenu(filterText = '', slideParams = null) {
+        if (!allMenusData || allMenusData.length === 0 || !allMenusData[currentMenuIndex]) {
+            console.error("Menu data or current menu is not available for display.");
+            menuContainer.innerHTML = '<p>Error loading menu content.</p>';
+            return;
+        }
+        const currentMenu = allMenusData[currentMenuIndex];
+
+        const menuButtons = mainMenuNavBar.querySelectorAll('button');
+        menuButtons.forEach(button => {
+            if (parseInt(button.getAttribute('data-menu-index')) === currentMenuIndex) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        const updateAndAnimateIn = () => {
+            populateMenuContent(currentMenu, filterText);
+            if (menuIndicatorsContainer) {
+                updateMenuIndicators();
+            }
+
+            if (slideParams && slideParams.inClass) {
+                requestAnimationFrame(() => {
+                    menuContainer.classList.remove(slideParams.inClass);
+                });
+            } else {
+                requestAnimationFrame(() => {
+                    menuContainer.style.opacity = '1';
+                });
+            }
+        };
+
+        if (slideParams && slideParams.outClass) {
+            menuContainer.classList.remove('menu-slide-in-from-left', 'menu-slide-in-from-right');
+            menuContainer.classList.add(slideParams.outClass);
+
+            menuContainer.addEventListener('transitionend', function onSlideOutComplete() {
+                menuContainer.removeEventListener('transitionend', onSlideOutComplete);
+                menuContainer.style.transition = 'none';
+                menuContainer.classList.remove(slideParams.outClass);
+                if (slideParams.inClass) {
+                    menuContainer.classList.add(slideParams.inClass);
+                }
+                menuContainer.offsetHeight; 
+                menuContainer.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
+                updateAndAnimateIn();
+            }, { once: true });
+        } else {
+            menuContainer.style.opacity = '0'; 
+            setTimeout(() => {
+                updateAndAnimateIn();
+            }, 50); 
+        }
+    }
+    // NOTE: The extraneous/duplicated block that was here after this function's closing brace has been removed.
+
+    // --- 5. UPDATE MENU INDICATORS (dots) ---
+    function updateMenuIndicators() {
+        if (!menuIndicatorsContainer || !allMenusData || allMenusData.length === 0) return;
+        menuIndicatorsContainer.innerHTML = '';
+        allMenusData.forEach((menu, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('indicator-dot');
+            if (index === currentMenuIndex) {
+                dot.classList.add('active');
+            }
+            dot.addEventListener('click', () => {
+                if (index === currentMenuIndex) return;
+
+                let slideParams = null;
+                if (index > currentMenuIndex) {
+                    slideParams = { outClass: 'menu-slide-out-left', inClass: 'menu-slide-in-from-right' };
+                } else {
+                    slideParams = { outClass: 'menu-slide-out-right', inClass: 'menu-slide-in-from-left' };
+                }
+                currentMenuIndex = index;
+                searchInput.value = '';
+                displayCurrentMenu(searchInput.value, slideParams);
+            });
+            menuIndicatorsContainer.appendChild(dot);
+        });
+    }
+
+    // --- 6. SWIPE HANDLING ---
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeThreshold = 50;
+
+    menuContainer.addEventListener('touchstart', function(event) {
+        touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+
+    menuContainer.addEventListener('touchend', function(event) {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (!allMenusData || allMenusData.length <= 1) return;
+        const deltaX = touchEndX - touchStartX;
+        let slideParams = null;
+
+        if (Math.abs(deltaX) > swipeThreshold) {
+            if (deltaX > 0) {
+                slideParams = { outClass: 'menu-slide-out-right', inClass: 'menu-slide-in-from-left' };
+                currentMenuIndex = (currentMenuIndex - 1 + allMenusData.length) % allMenusData.length;
+            } else {
+                slideParams = { outClass: 'menu-slide-out-left', inClass: 'menu-slide-in-from-right' };
+                currentMenuIndex = (currentMenuIndex + 1) % allMenusData.length;
+            }
+            searchInput.value = '';
+            displayCurrentMenu(searchInput.value, slideParams);
+        }
+    }
+
+    // --- 7. SEARCH FUNCTIONALITY ---
+    searchInput.addEventListener('input', (e) => {
+        if (!allMenusData || allMenusData.length === 0) return;
+        displayCurrentMenu(e.target.value, null); // Search updates with a fade
+    });
+});
