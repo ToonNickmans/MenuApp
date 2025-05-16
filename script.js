@@ -1,180 +1,50 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // --- 1. ALL MENU DATA ---
-    // Your existing menuData is now the 'categories' for the "Main Menu"
-    const allMenusData = [
-        {
-            name: "Main Menu",
-            categories: [
-                {
-                    category: "Crown Jewels",
-                    id: "crown-jewels",
-                    items: [
-                        { name: "Black Widow", description: "1 g", price: "€7.00" }
-                    ]
-                },
-                {
-                    category: "Edel Weeds",
-                    id: "edel-weeds",
-                    items: [
-                        { name: "Blue", description: "2 g", price: "€15.00" },
-                        { name: "Green", description: "10 g", price: "€20.00" },
-                        { name: "Blend", description: "20 g", price: "€30.00" }
-                    ]
-                },
-                {
-                    category: "Extracten",
-                    id: "extracten",
-                    items: [
-                        { name: "Sensy - Zero Zero", description: "1 g", price: "€14.50" },
-                        { name: "Sensy - Zero Zero", description: "2 g", price: "€26.00" },
-                        { name: "King Kush - RED", description: "3 g", price: "€24.20" },
-                        { name: "King Kush - GREEN", description: "3 g", price: "€24.20" },
-                        { name: "King Kush - ICE", description: "3 g", price: "€24.20" },
-                        { name: "King Kush - TERP", description: "3 g", price: "€24.20" },
-                        { name: "King Kush - CRUMBLE", description: "3 g", price: "€24.20" }
-                    ]
-                },
-                {
-                    category: "Hempster Life",
-                    id: "hempster-life",
-                    items: [
-                        { name: "Bubblegum", description: "2 g", price: "€24.90" },
-                        { name: "Bubba Koi", description: "2 g", price: "€21.90" },
-                        { name: "Caramel Candy", description: "2 g", price: "€24.90" },
-                        { name: "Gorilla Glue", description: "2 g", price: "€21.90" },
-                        { name: "Harley Queen", description: "2 g", price: "€24.90" },
-                        { name: "Strawberry", description: "2 g", price: "€24.90" }
-                    ]
-                },
-                {
-                    category: "Jane's Garden",
-                    id: "janes-garden",
-                    items: [
-                        { name: "Blueberry", description: "2 g", price: "€26.00" },
-                        { name: "Buddha Cheese", description: "2 g", price: "€26.00" },
-                        { name: "Gelato", description: "5 g", price: "€62.50" },
-                        { name: "Sour Lemon", description: "5 g", price: "€57.50" },
-                        { name: "Super Silver Haze", description: "2 g", price: "€26.00" },
-                        { name: "Super Silver Haze", description: "5 g", price: "€57.50" },
-                        { name: "White Widow", description: "2 g", price: "€26.00" }
-                    ]
-                },
-                {
-                    category: "King Kush",
-                    id: "king-kush",
-                    items: [
-                        { name: "Caramello", description: "2 g", price: "€26.00" },
-                        { name: "Caramello", description: "4 g", price: "€50.00" },
-                        { name: "Chocolope", description: "2 g", price: "€26.00" },
-                        { name: "Chocolope", description: "4 g", price: "€50.00" },
-                        { name: "Critical Kush", description: "2 g", price: "€26.00" },
-                        { name: "Critical Kush", description: "4 g", price: "€50.00" },
-                        { name: "Lemon Haze", description: "2 g", price: "€26.00" },
-                        { name: "SoMango", description: "2 g", price: "€21.90" },
-                        { name: "SoMango", description: "4 g", price: "€40.00" },
-                        { name: "Super Skunk", description: "2 g", price: "€26.00" },
-                        { name: "Super Skunk", description: "4 g", price: "€50.00" },
-                        { name: "Lemon Haze", description: "1 g", price: "€15.00" },
-                        { name: "Lemon Haze", description: "5 g", price: "€62.50" }
-                    ]
-                },
-                {
-                    category: "Sensy",
-                    id: "sensy",
-                    items: [
-                        { name: "Blueberry", description: "2 g", price: "€21.90" },
-                        { name: "Cali", description: "5 g", price: "€20.00" },
-                        { name: "Cali", description: "3 g", price: "€14.00" },
-                        { name: "OG Kush", description: "2 g", price: "€19.90" },
-                        { name: "Super Haze", description: "2 g", price: "€19.90" },
-                        { name: "Super Haze", description: "1 g", price: "€10.00" },
-                        { name: "Vanilla Kush", description: "2 g", price: "€21.90" },
-                        { name: "Weedy", description: "5 g", price: "€20.00" },
-                        { name: "Weedy", description: "3 g", price: "€14.00" },
-                        { name: "Grass", description: "15 g", price: "€19.90" },
-                        { name: "Blend", description: "20 g", price: "€35.00" }
-                    ]
-                },
-                {
-                    category: "Spek",
-                    id: "spek",
-                    items: [
-                        { name: "Hawaiian Snow", description: "3 g", price: "€24.20" },
-                        { name: "Kosher Kush", description: "3 g", price: "€24.20" },
-                        { name: "Skywalker OG", description: "3 g", price: "€24.20" }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Grinders",
-            categories: [
-                {
-                    category: "Metal Grinders", id: "metal-grinders", items: [
-                        { name: "Small Metal Grinder", description: "2-part", price: "€10.00" },
-                        { name: "Large Metal Grinder", description: "4-part with kief catcher", price: "€25.00" }
-                    ]
-                },
-                {
-                    category: "Plastic Grinders", id: "plastic-grinders", items: [
-                        { name: "Basic Plastic Grinder", description: "Assorted colors", price: "€5.00" }
-                    ]
-                }
-                // Add more categories and items for Grinders here
-            ]
-        },
-        {
-            name: "Bongs & Pipes",
-            categories: [
-                {
-                    category: "Glass Bongs", id: "glass-bongs", items: [
-                        { name: "Mini Glass Bong", description: "15cm height", price: "€30.00" },
-                        { name: "Percolator Bong", description: "Smooth hits", price: "€75.00" }
-                    ]
-                },
-                {
-                    category: "Pipes", id: "pipes", items: [
-                        { name: "Wooden Pipe", description: "Classic design", price: "€12.00" },
-                        { name: "Metal Pipe", description: "Durable", price: "€10.00" }
-                    ]
-                }
-                // Add more categories and items for Bongs & Pipes here
-            ]
-        },
-        {
-            name: "CBD Oils & Cosmetics",
-            categories: [
-                {
-                    category: "CBD Oils", id: "cbd-oils", items: [
-                        { name: "CBD Oil 5%", description: "10ml bottle", price: "€20.00" },
-                        { name: "CBD Oil 10%", description: "10ml bottle", price: "€35.00" }
-                    ]
-                },
-                {
-                    category: "CBD Cosmetics", id: "cbd-cosmetics", items: [
-                        { name: "CBD Face Cream", description: "Soothing and moisturizing", price: "€28.00" },
-                        { name: "CBD Lip Balm", description: "For dry lips", price: "€8.00" }
-                    ]
-                }
-                // Add more categories and items for CBD products here
-            ]
-        }
-    ];
-
+    let allMenusData = []; // Will be populated from menu-data.json
     let currentMenuIndex = 0;
 
     const menuContainer = document.getElementById('menu-container');
     const categoryNav = document.getElementById('category-nav');
     const searchInput = document.getElementById('searchInput');
-    const menuTitleElement = document.getElementById('menu-title'); // Make sure this ID exists in your H1 tag
-    const menuIndicatorsContainer = document.getElementById('menu-indicators'); // Make sure this div exists in your HTML
+    const menuTitleElement = document.getElementById('menu-title');
+    const menuIndicatorsContainer = document.getElementById('menu-indicators');
 
-    // --- RENDER CURRENT MENU AND CATEGORIES ---
+    // --- FETCH MENU DATA FROM JSON FILE ---
+    fetch('menu-data.json') // Ensure 'menu-data.json' is in the same directory or provide correct path
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.json(); // Parses the JSON response into a JavaScript object/array
+        })
+        .then(data => {
+            allMenusData = data; // Assign fetched data
+            if (allMenusData && allMenusData.length > 0) {
+                displayCurrentMenu(); // Load the first menu initially now that data is available
+            } else {
+                console.error('Menu data loaded is empty or invalid.');
+                menuContainer.innerHTML = '<p>Menu data could not be loaded or is empty.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching or parsing menu data:', error);
+            menuContainer.innerHTML = '<p>Sorry, there was an error loading the menu. Please try again later.</p>';
+        });
+
+    // --- RENDER CURRENT MENU AND CATEGORIES (displayCurrentMenu) ---
+    // This function is the same as the one I provided in the previous update
+    // It uses the 'allMenusData' and 'currentMenuIndex' variables
     function displayCurrentMenu(filterText = '') {
-        menuContainer.classList.add('loading'); // For fade effect
+        menuContainer.classList.add('loading');
 
         setTimeout(() => {
             const currentMenu = allMenusData[currentMenuIndex];
+            if (!currentMenu) { // Safety check if allMenusData is not populated yet or index is wrong
+                console.error("Current menu data is not available.");
+                menuContainer.innerHTML = '<p>Error: Menu not found.</p>';
+                menuContainer.classList.remove('loading');
+                return;
+            }
+
             if (menuTitleElement) {
                 menuTitleElement.textContent = currentMenu.name;
             }
@@ -202,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     let categoryHasVisibleItemsInSearch = category.items.some(item =>
                         item.name.toLowerCase().includes(normalizedFilterText) ||
-                        item.description.toLowerCase().includes(normalizedFilterText)
+                        (item.description && item.description.toLowerCase().includes(normalizedFilterText))
                     );
 
                     const categorySection = document.createElement('div');
@@ -217,9 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (category.items && category.items.length > 0) {
                         category.items.forEach(item => {
                             if (
-                                filterText === '' || // Show all if no filter
+                                filterText === '' ||
                                 item.name.toLowerCase().includes(normalizedFilterText) ||
-                                item.description.toLowerCase().includes(normalizedFilterText)
+                                (item.description && item.description.toLowerCase().includes(normalizedFilterText))
                             ) {
                                 const menuItemDiv = document.createElement('div');
                                 menuItemDiv.classList.add('menu-item');
@@ -242,46 +112,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                     }
 
-
                     if (itemsRenderedInCategory > 0) {
                         menuContainer.appendChild(categorySection);
+                         // Add category button if section has items, or if not filtering (to show all categories)
                         if (!filterText || categoryHasVisibleItemsInSearch) {
                            categoryNav.appendChild(categoryButton);
                         }
                     } else if (!filterText && (!category.items || category.items.length === 0)) {
-                        // Category is genuinely empty, show message and button
                         categorySection.innerHTML += '<p>No items in this category.</p>';
                         menuContainer.appendChild(categorySection);
-                        categoryNav.appendChild(categoryButton);
-                    } else if (filterText && itemsRenderedInCategory === 0 && categoryHasVisibleItemsInSearch) {
-                        // This case should ideally not happen if categoryHasVisibleItemsInSearch is true
-                        // But if it means there were items but filter hid all, still show button
-                         categoryNav.appendChild(categoryButton);
-                    } else if (!filterText && itemsRenderedInCategory === 0 && category.items && category.items.length > 0) {
-                        // If not filtering, but somehow all items got filtered out from a non-empty category
-                        // (This condition might be redundant with current logic but kept for robustness)
-                        categorySection.innerHTML += '<p>No items currently match criteria in this category.</p>';
-                        menuContainer.appendChild(categorySection);
-                        categoryNav.appendChild(categoryButton);
+                        categoryNav.appendChild(categoryButton); // Show button even if category is empty (when not filtering)
                     }
-
-
-                    // If category nav button needs to be displayed even if empty (when not filtering)
-                    if (!filterText && itemsRenderedInCategory === 0) {
-                        const existingButton = Array.from(categoryNav.children).find(btn => btn.getAttribute('data-category-id') === category.id);
-                        if (!existingButton) {
-                            categoryNav.appendChild(categoryButton); // Add if not already added
-                        }
-                    }
+                    // Ensure all category buttons are shown when not filtering, even if a category becomes empty after filtering.
+                    // This specific logic for adding category buttons might need refinement based on exact desired behavior
+                    // for empty categories vs categories empty *due to filtering*.
+                    // The primary goal is that categoryNav should reflect current menu's categories.
 
                 });
             }
 
             if (!hasVisibleItemsOverall && filterText) {
                 menuContainer.innerHTML = '<p>No items match your search in this menu.</p>';
-                // Repopulate categoryNav for the current menu if search yields no results.
-                categoryNav.innerHTML = ''; // Clear previous
-                currentMenu.categories.forEach(cat => {
+                categoryNav.innerHTML = ''; // Clear search-specific buttons
+                currentMenu.categories.forEach(cat => { // Re-add all categories for current menu
                     const btn = document.createElement('button');
                     btn.textContent = cat.category;
                     btn.setAttribute('data-category-id', cat.id);
@@ -292,22 +145,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                     categoryNav.appendChild(btn);
                 });
-
             } else if (!hasVisibleItemsOverall && !filterText && (!currentMenu.categories || currentMenu.categories.length === 0 || currentMenu.categories.every(c => !c.items || c.items.length === 0))) {
                 menuContainer.innerHTML = '<p>This menu currently has no items listed.</p>';
             }
-
 
             if (menuIndicatorsContainer) {
                 updateMenuIndicators();
             }
             menuContainer.classList.remove('loading');
-        }, 150); // Corresponds to half of a 0.3s opacity transition
+        }, 150);
     }
 
     // --- UPDATE MENU INDICATORS ---
+    // This function is the same as the one I provided in the previous update
     function updateMenuIndicators() {
-        if (!menuIndicatorsContainer) return;
+        if (!menuIndicatorsContainer || !allMenusData || allMenusData.length === 0) return;
         menuIndicatorsContainer.innerHTML = '';
         allMenusData.forEach((menu, index) => {
             const dot = document.createElement('span');
@@ -317,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             dot.addEventListener('click', () => {
                 currentMenuIndex = index;
-                searchInput.value = ''; // Clear search on menu change
+                searchInput.value = '';
                 displayCurrentMenu();
             });
             menuIndicatorsContainer.appendChild(dot);
@@ -325,9 +177,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- SWIPE HANDLING ---
+    // This logic is the same as the one I provided in the previous update
     let touchStartX = 0;
     let touchEndX = 0;
-    const swipeThreshold = 50; // Minimum pixels for a swipe
+    const swipeThreshold = 50;
 
     menuContainer.addEventListener('touchstart', function(event) {
         touchStartX = event.changedTouches[0].screenX;
@@ -339,23 +192,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function handleSwipe() {
+        if (!allMenusData || allMenusData.length <= 1) return; // No swipe if only one/no menu
         const deltaX = touchEndX - touchStartX;
         if (Math.abs(deltaX) > swipeThreshold) {
-            if (deltaX > 0) { // Swipe Right (previous menu)
+            if (deltaX > 0) {
                 currentMenuIndex = (currentMenuIndex - 1 + allMenusData.length) % allMenusData.length;
-            } else { // Swipe Left (next menu)
+            } else {
                 currentMenuIndex = (currentMenuIndex + 1) % allMenusData.length;
             }
-            searchInput.value = ''; // Clear search on menu change
+            searchInput.value = '';
             displayCurrentMenu();
         }
     }
 
     // --- SEARCH FUNCTIONALITY ---
+    // This listener is the same as the one I provided in the previous update
     searchInput.addEventListener('input', (e) => {
+        if (!allMenusData || allMenusData.length === 0) return; // Don't search if no data
         displayCurrentMenu(e.target.value);
     });
 
-    // --- INITIAL LOAD ---
-    displayCurrentMenu(); // Load the first menu initially
+    // Note: Initial call to displayCurrentMenu() is now inside the .then() block of the fetch call.
 });
