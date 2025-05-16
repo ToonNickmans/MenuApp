@@ -140,49 +140,86 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- 4. DISPLAY CURRENT MENU (Handles Animations, Calls Content Population) ---
-    function displayCurrentMenu(filterText = '', slideParams = null) {
-        if (!allMenusData || allMenusData.length === 0 || !allMenusData[currentMenuIndex]) {
-            console.error("Menu data or current menu is not available for display.");
-            menuContainer.innerHTML = '<p>Error loading menu content.</p>'; // Show error in main container
-            return;
+   // Replace the ENTIRE displayCurrentMenu function in your script.js with this one:
+function displayCurrentMenu(filterText = '', slideParams = null) {
+    if (!allMenusData || allMenusData.length === 0 || !allMenusData[currentMenuIndex]) {
+        console.error("Menu data or current menu is not available for display.");
+        menuContainer.innerHTML = '<p>Error loading menu content.</p>';
+        return;
+    }
+    const currentMenu = allMenusData[currentMenuIndex];
+
+    // Update active state in the main menu navigation bar (#category-nav)
+    const menuButtons = mainMenuNavBar.querySelectorAll('button');
+    menuButtons.forEach(button => {
+        if (parseInt(button.getAttribute('data-menu-index')) === currentMenuIndex) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
         }
-        const currentMenu = allMenusData[currentMenuIndex];
+    });
 
-        // Update active state in the main menu navigation bar (#category-nav)
-        const menuButtons = mainMenuNavBar.querySelectorAll('button');
-        menuButtons.forEach(button => {
-            if (parseInt(button.getAttribute('data-menu-index')) === currentMenuIndex) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
-            }
-        });
+    // This function will be called to populate content and trigger slide-in/fade-in
+    const updateAndAnimateIn = () => {
+        populateMenuContent(currentMenu, filterText); // Update the actual HTML content
+        if (menuIndicatorsContainer) {
+            updateMenuIndicators();
+        }
 
-        const performContentUpdateAndTransition = () => {
-            populateMenuContent(currentMenu, filterText);
-            if (menuIndicatorsContainer) {
-                updateMenuIndicators();
-            }
-
-           // MODIFIED part in performContentUpdateAndTransition function:
-// ... after populateMenuContent(currentMenu, filterText); and if (menuIndicatorsContainer) { updateMenuIndicators(); } ...
-
-            if (slideParams && slideParams.inClass) {
-                // At this point, menuContainer has slideParams.inClass (e.g., transform: translateX(100%); opacity: 0;)
-                // and its content has just been updated.
-                // We want it to animate to its default state (transform: translateX(0); opacity: 1;).
-                // The transition property on #menu-container will handle this.
-                
-                // Ensure opacity is set to 1 for the target state of the transition
-                menuContainer.style.opacity = '1';
-                // Removing the class will trigger the transform to animate to translateX(0)
+        if (slideParams && slideParams.inClass) {
+            // At this point, menuContainer has 'slideParams.inClass' (e.g., menu-slide-in-from-right)
+            // which means it's positioned off-screen and has opacity: 0.
+            // Transitions were re-enabled just before calling this.
+            // Now, remove the class to animate it to the default state (translateX(0), opacity 1).
+            requestAnimationFrame(() => { // Ensure class removal happens in next paint cycle
                 menuContainer.classList.remove(slideParams.inClass);
-            } else {
-                // Simple fade-in for non-slide scenarios (initial load, search filter)
+                // Opacity and Transform will animate to the defaults defined in #menu-container CSS
+            });
+        } else {
+            // Simple fade-in for non-slide scenarios (initial load, search filter)
+            requestAnimationFrame(() => { // Ensure opacity change happens after content update
                 menuContainer.style.opacity = '1';
+            });
+        }
+    };
+
+    // Start the transition process
+    if (slideParams && slideParams.outClass) {
+        // 1. Apply the slide-out class (which includes transform and opacity: 0)
+        menuContainer.classList.remove('menu-slide-in-from-left', 'menu-slide-in-from-right'); // Clear any residual in-classes
+        menuContainer.classList.add(slideParams.outClass);
+
+        menuContainer.addEventListener('transitionend', function onSlideOutComplete() {
+            menuContainer.removeEventListener('transitionend', onSlideOutComplete);
+
+            // 2. Slide-out finished. Now, prepare for slide-in:
+            //    a. Instantly remove the slide-out class.
+            //    b. Instantly apply the slide-in class (positions off-screen on other side, opacity 0).
+            //    c. Temporarily disable transitions to make this "snap" instant.
+            menuContainer.style.transition = 'none'; // Disable transitions
+            menuContainer.classList.remove(slideParams.outClass);
+            if (slideParams.inClass) {
+                menuContainer.classList.add(slideParams.inClass);
             }
-// ...
-        };
+
+            //    d. Force a reflow so the browser registers the new "snapped" state.
+            menuContainer.offsetHeight; // Reading offsetHeight forces reflow
+
+            //    e. Re-enable transitions *before* calling the function that will trigger the slide-in.
+            menuContainer.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
+            
+            //    f. Call the function to update content and then trigger the slide-in animation.
+            updateAndAnimateIn();
+
+        }, { once: true });
+    } else {
+        // Fallback to simple fade for initial load or search filter
+        menuContainer.style.opacity = '0'; // Start fade out
+        setTimeout(() => { // Allow opacity:0 to take effect
+            updateAndAnimateIn();
+        }, 50); // A short delay for opacity to set before content update & fade-in
+    }
+}
 
         // Clear previous animation classes and start fade out / slide out
         menuContainer.classList.remove('menu-slide-out-left', 'menu-slide-out-right', 'menu-slide-in-from-left', 'menu-slide-in-from-right');
