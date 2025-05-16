@@ -275,5 +275,728 @@
                 ]
             }
         ]
+    },
+    {
+        "name": "Grinders",
+        "categories": [
+            {
+                "category": "Plastic",
+                "id": "plastic",
+                "items": [
+                    {
+                        "name": "Black Leaf - Acrylic 3 parts + storage compartment",
+                        "description": "Violet",
+                        "price": "€2.90"
+                    },
+                    {
+                        "name": "Black Leaf - Acrylic 3 parts + storage compartment",
+                        "description": "Red",
+                        "price": "€2.90"
+                    },
+                    {
+                        "name": "Black Leaf - Acrylic 3 parts + storage compartment",
+                        "description": "Blue",
+                        "price": "€2.90"
+                    },
+                    {
+                        "name": "Akra - Dreamliner",
+                        "description": "Various Colours",
+                        "price": "€3.00"
+                    },
+                    {
+                        "name": "Best Buds - Eco",
+                        "description": "Cookies 'n cream",
+                        "price": "€4.90"
+                    },
+                    {
+                        "name": "Best Buds - Eco",
+                        "description": "Kosher Kush",
+                        "price": "€4.90"
+                    },
+                    {
+                        "name": "Mascotte Plastic",
+                        "description": "Clear",
+                        "price": "€7.00"
+                    },
+                    {
+                        "name": "Santa Cruz Cookies 55 mm",
+                        "description": "Red or Blue",
+                        "price": "€10.90"
+                    },
+                    {
+                        "name": "All in one pocket graffiti combie",
+                        "description": "Various Colours",
+                        "price": "€15.00"
+                    }
+                ]
+            },
+            {
+                "category": "Metal",
+                "id": "metal",
+                "items": [
+                    {
+                        "name": "Black Leaf - Grinder 2-part",
+                        "description": "Gold",
+                        "price": "€8.90"
+                    },
+                    {
+                        "name": "Black Leaf - Grinder 2-part",
+                        "description": "Silver",
+                        "price": "€8.90"
+                    },
+                    {
+                        "name": "Black Leaf - Grinder 2-part",
+                        "description": "Grey",
+                        "price": "€8.90"
+                    },
+                    {
+                        "name": "Champ High - Original leaf",
+                        "description": "40mm",
+                        "price": "€9.90"
+                    },
+                    {
+                        "name": "Black Leaf - Grinder 4-part",
+                        "description": "Gold",
+                        "price": "€14.90"
+                    },
+                    {
+                        "name": "Black Leaf - Grinder 4-part",
+                        "description": "Red",
+                        "price": "€14.90"
+                    },
+                    {
+                        "name": "Black Leaf - Grinder 4-part",
+                        "description": "Grey",
+                        "price": "€14.90"
+                    },
+                    {
+                        "name": "Mascotte Design egg",
+                        "description": "Silver",
+                        "price": "€15.00"
+                    },
+                    {
+                        "name": "Black Leaf - 4-part",
+                        "description": "Blue",
+                        "price": "€17.90"
+                    },
+                    {
+                        "name": "Best Buds - Mighty Alu Rose 4 parts (60 mm)",
+                        "description": "Gold",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Best Buds - Mighty Alu 4 parts (60 mm)",
+                        "description": "Silver Gold",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Best Buds - Mighty Alu 4 parts (60 mm)",
+                        "description": "Black",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Super puff - classic",
+                        "description": "Gold",
+                        "price": "€19.95"
+                    },
+                    {
+                        "name": "Super puff - classic",
+                        "description": "Blue",
+                        "price": "€19.95"
+                    },
+                    {
+                        "name": "Mascotte 4 Layer Expert Compact",
+                        "description": "Black",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "RAW - Hammer craft Small Alu 50 mm",
+                        "description": "Black",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "The bulldog Grinder 3 layers",
+                        "description": "Grey",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "HGHLF 4 piece SMALL",
+                        "description": "assorted colours",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "HGHLF 2 piece SMALL",
+                        "description": "Black",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Super puff - black",
+                        "description": "Blue",
+                        "price": "€22.95"
+                    },
+                    {
+                        "name": "Super puff - black",
+                        "description": "Gold",
+                        "price": "€22.95"
+                    },
+                    {
+                        "name": "Tyson 2.0 Amsterdam 2 parts (54mm)",
+                        "description": "Black",
+                        "price": "€24.90"
+                    },
+                    {
+                        "name": "Super puff - Lightning",
+                        "description": "Blue",
+                        "price": "€24.95"
+                    },
+                    {
+                        "name": "Super puff - Lightning",
+                        "description": "Gold",
+                        "price": "€24.95"
+                    },
+                    {
+                        "name": "Champ - Compact 4 layer",
+                        "description": "assorted colours",
+                        "price": "€25.00"
+                    },
+                    {
+                        "name": "Super puff - 5 piece",
+                        "description": "Blue",
+                        "price": "€29.95"
+                    },
+                    {
+                        "name": "Super puff - 5 piece",
+                        "description": "Gold",
+                        "price": "€29.95"
+                    },
+                    {
+                        "name": "Champ High - Golden Leaf",
+                        "description": "Black",
+                        "price": "€30.00"
+                    },
+                    {
+                        "name": "HGHLF 4 piece",
+                        "description": "assorted colours",
+                        "price": "€40.00"
+                    },
+                    {
+                        "name": "Krush Kube - 2.0 2 Parts - 55mm",
+                        "description": "Rose",
+                        "price": "€45.00"
+                    },
+                    {
+                        "name": "Krush Kube - 2.0 2 Parts - 55mm",
+                        "description": "Grey",
+                        "price": "€45.00"
+                    }
+                ]
+            },
+            {
+                "category": "Wood",
+                "id": "wood",
+                "items": [
+                    {
+                        "name": "Super puff - Sativa Days indica nights",
+                        "description": "Wood",
+                        "price": "€12.95"
+                    },
+                    {
+                        "name": "Champ - wooden 60mm",
+                        "description": "Wood",
+                        "price": "€27.50"
+                    },
+                    {
+                        "name": "Black Leaf - Alu/wooden 4 part",
+                        "description": "Wooden",
+                        "price": "€30.90"
+                    },
+                    {
+                        "name": "Marley - natural 4 Piece Small",
+                        "description": "black walnut",
+                        "price": "€80.00"
+                    }
+                ]
+            },
+            {
+                "category": "Electric",
+                "id": "electric",
+                "items": [
+                    {
+                        "name": "Electronic Grinder - Chewy G3 Deluxe",
+                        "description": "Black",
+                        "price": "€99.00"
+                    },
+                    {
+                        "name": "Otto grinder - Banana bros",
+                        "description": "White",
+                        "price": "€129.99"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Bongs & Pipes",
+        "categories": [
+            {
+                "category": "Spare Parts",
+                "id": "spare-parts",
+                "items": [
+                    {
+                        "name": "Black bong glass bowl holder",
+                        "description": "dual size 14 en 18 mm",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Black Leaf - Chillum",
+                        "description": "30cm",
+                        "price": "€15.00"
+                    },
+                    {
+                        "name": "Double snake black bong glass bowl 18 mm",
+                        "description": "",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Double snake clear bong glass bowl 18 mm",
+                        "description": "",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Double snake green bong glass bowl 18 mm",
+                        "description": "",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Green bong glass bowl holder",
+                        "description": "dual size 14 en 18 mm",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Bowl for Black Leaf glass bong",
+                        "description": "50mm 14mm",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Transparant bong glass bowl holder",
+                        "description": "dual size 14 en 18 mm",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Blaze slit diffuser",
+                        "description": "",
+                        "price": "€6.90"
+                    },
+                    {
+                        "name": "Black Leaf - Hole diffuser chillum 120 mm",
+                        "description": "",
+                        "price": "€4.90"
+                    },
+                    {
+                        "name": "Dark lord green glass bong bowl",
+                        "description": "Green",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Bowl for glass bong",
+                        "description": "14mm Blue",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Dark lord Blue glass bong bowl",
+                        "description": "18mm",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Replacement quartz dab banger 14mm",
+                        "description": "",
+                        "price": "€6.00"
+                    },
+                    {
+                        "name": "Dab pencil tool",
+                        "description": "",
+                        "price": "€8.50"
+                    }
+                ]
+            },
+            {
+                "category": "Pipe",
+                "id": "pipe",
+                "items": [
+                    {
+                        "name": "Black Leaf - Gandalf smoking pipe",
+                        "description": "medium amber",
+                        "price": "€18.90"
+                    },
+                    {
+                        "name": "Champ High - Glass Original Pipe",
+                        "description": "Clear",
+                        "price": "€17.00"
+                    },
+                    {
+                        "name": "Champ High - Pills Pipe colors",
+                        "description": "Various Colours",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Champ High - Pipe (Cosmos & Leaf)",
+                        "description": "",
+                        "price": "€6.00"
+                    },
+                    {
+                        "name": "K. Haring - Spoon Pipe",
+                        "description": "",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Marley - natural water pipe",
+                        "description": "",
+                        "price": "€220.00"
+                    },
+                    {
+                        "name": "Marley Natural - Steam Roller Smoked glass",
+                        "description": "",
+                        "price": "€55.00"
+                    },
+                    {
+                        "name": "Marley Natural - Taster smoked glass",
+                        "description": "",
+                        "price": "€29.00"
+                    },
+                    {
+                        "name": "Black Leaf - Glass Oil Pipe",
+                        "description": "",
+                        "price": "€7.50"
+                    },
+                    {
+                        "name": "Pipe - Glass pipe yellow bee",
+                        "description": "",
+                        "price": "€12.00"
+                    },
+                    {
+                        "name": "Champ High - Pipe (Pool glass black)",
+                        "description": "",
+                        "price": "€7.90"
+                    },
+                    {
+                        "name": "Champ High - Pipe (Seahorse)",
+                        "description": "",
+                        "price": "€7.90"
+                    },
+                    {
+                        "name": "Black Leaf - Glass Shotgun Smoking Pipe",
+                        "description": "",
+                        "price": "€5.00"
+                    },
+                    {
+                        "name": "Breit Drops Hand Pipe with Filter Adapter",
+                        "description": "",
+                        "price": "€12.00"
+                    },
+                    {
+                        "name": "Black Leaf Oil Pipe 120mm",
+                        "description": "",
+                        "price": "€5.90"
+                    },
+                    {
+                        "name": "Smoking Pipe Wood dark 80mm",
+                        "description": "",
+                        "price": "€4.90"
+                    },
+                    {
+                        "name": "Dreamliner tar catching dry pipe",
+                        "description": "",
+                        "price": "€6.00"
+                    }
+                ]
+            },
+            {
+                "category": "Bong",
+                "id": "bong",
+                "items": [
+                    {
+                        "name": "Bong - Alien Octopus Glass-Silicone",
+                        "description": "20cm",
+                        "price": "€27.50"
+                    },
+                    {
+                        "name": "Bong - Black Leaf glass",
+                        "description": "30cm",
+                        "price": "€20.90"
+                    },
+                    {
+                        "name": "Bong - Black Leaf oil/herb Bubbler eye",
+                        "description": "with banger",
+                        "price": "€20.90"
+                    },
+                    {
+                        "name": "Bong - Black leaf percolator icebong",
+                        "description": "Blue",
+                        "price": "€30.90"
+                    },
+                    {
+                        "name": "Bong - BREIT Ice bong jetstream",
+                        "description": "",
+                        "price": "€15.00"
+                    },
+                    {
+                        "name": "Bong - Pop art Glass",
+                        "description": "26 cm",
+                        "price": "€32.50"
+                    },
+                    {
+                        "name": "Bong - Space hero Grey Silicone bong",
+                        "description": "15cm",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Bong - Spaceman White silicone bong",
+                        "description": "15cm",
+                        "price": "€25.00"
+                    },
+                    {
+                        "name": "Bong - Weed Vuittton Classy Glass Bong",
+                        "description": "32cm",
+                        "price": "€89.00"
+                    },
+                    {
+                        "name": "Crystal Bubbler glass pipe",
+                        "description": "blue",
+                        "price": "€12.90"
+                    },
+                    {
+                        "name": "Eyce beaker",
+                        "description": "Various Colours",
+                        "price": "€70.00"
+                    },
+                    {
+                        "name": "Higher standards - rig kit",
+                        "description": "Complete Kit",
+                        "price": "€170.00"
+                    },
+                    {
+                        "name": "K Haring - Bubbler",
+                        "description": "",
+                        "price": "€150.99"
+                    },
+                    {
+                        "name": "K. Haring - concentrate rig",
+                        "description": "",
+                        "price": "€180.00"
+                    },
+                    {
+                        "name": "Marley - natural bubbler",
+                        "description": "",
+                        "price": "€100.00"
+                    },
+                    {
+                        "name": "Marley Natural - Water Pipe Smoked Glass",
+                        "description": "",
+                        "price": "€140.00"
+                    },
+                    {
+                        "name": "Chill Pipe - Stainless Steel",
+                        "description": "",
+                        "price": "€129.00"
+                    },
+                    {
+                        "name": "Chill Pipe - Blue Gloss",
+                        "description": "",
+                        "price": "€129.00"
+                    },
+                    {
+                        "name": "Bong - BREIT Ice bong with kickhole",
+                        "description": "",
+                        "price": "€20.90"
+                    },
+                    {
+                        "name": "Bong - Black leaf percolator icebong with kickhole",
+                        "description": "",
+                        "price": "€35.90"
+                    },
+                    {
+                        "name": "Bong - BREIT ZickZack with diffuser chillum",
+                        "description": "",
+                        "price": "€20.90"
+                    },
+                    {
+                        "name": "Crystal Bubbler glass pipe black",
+                        "description": "",
+                        "price": "€12.90"
+                    },
+                    {
+                        "name": "Black Leaf - BREITseite cylinderbong ICE",
+                        "description": "",
+                        "price": "€25.90"
+                    },
+                    {
+                        "name": "Black Leaf - Glass cup bong SEX + WEED",
+                        "description": "",
+                        "price": "€30.90"
+                    },
+                    {
+                        "name": "Black Leaf - Zombie chaser Machine bong w. kickhole",
+                        "description": "",
+                        "price": "€48.90"
+                    },
+                    {
+                        "name": "Black Leaf - Beaker Bong Mini Ice Pink",
+                        "description": "",
+                        "price": "€36.90"
+                    },
+                    {
+                        "name": "Black Leaf - Beaker Bong Mini Ice Aquamarine",
+                        "description": "",
+                        "price": "€36.90"
+                    },
+                    {
+                        "name": "Black Leaf - Beaker Bong Mini Ice Blue",
+                        "description": "",
+                        "price": "€36.90"
+                    },
+                    {
+                        "name": "Black Leaf - Glass cylinder bong skull",
+                        "description": "",
+                        "price": "€48.90"
+                    },
+                    {
+                        "name": "Black Leaf - Glass Multi level bong Percolator Ice AMBER",
+                        "description": "",
+                        "price": "€48.90"
+                    },
+                    {
+                        "name": "Black Leaf - Glass Multi level bong Percolator Ice BLACK",
+                        "description": "",
+                        "price": "€48.90"
+                    },
+                    {
+                        "name": "Black Leaf - Glass Multi level bong Percolator Ice BLUE",
+                        "description": "",
+                        "price": "€48.90"
+                    },
+                    {
+                        "name": "Rick and Morty Girl Handcrafted Glass Bong 25cm",
+                        "description": "",
+                        "price": "€45.00"
+                    },
+                    {
+                        "name": "Rick and Morty Guy Handcrafted Glass Bong 25cm",
+                        "description": "",
+                        "price": "€45.00"
+                    },
+                    {
+                        "name": "Champ High - Skull Silicone Bong Mix Colors",
+                        "description": "",
+                        "price": "€9.90"
+                    },
+                    {
+                        "name": "Black Leaf - Nautilus 22' bong w slit diffuser blue",
+                        "description": "",
+                        "price": "€48.00"
+                    },
+                    {
+                        "name": "Black Leaf Bong UFO Percolater Bong With Banger",
+                        "description": "",
+                        "price": "€48.00"
+                    },
+                    {
+                        "name": "Black Leaf Oil Bong with Banger Red 180mm",
+                        "description": "",
+                        "price": "€18.00"
+                    },
+                    {
+                        "name": "Black leaf - Bong SCULPY glass BLUE",
+                        "description": "",
+                        "price": "€18.90"
+                    },
+                    {
+                        "name": "Eyce silicone dab rig",
+                        "description": "",
+                        "price": "€70.00"
+                    },
+                    {
+                        "name": "Mini Bar Glass bottle Bong",
+                        "description": "",
+                        "price": "€5.50"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Oils & creams",
+        "categories": [
+            {
+                "category": "Pure CBD",
+                "id": "pure-cbd",
+                "items": [
+                    {
+                        "name": "Pure CBD - CBN Oil 5% CBN - 2.5% CBD",
+                        "description": "",
+                        "price": "€45.00"
+                    },
+                    {
+                        "name": "Pure CBD Balm 50ml/ 750Mg CBD",
+                        "description": "",
+                        "price": "€29.90"
+                    },
+                    {
+                        "name": "Pure CBD Lotion 150ml / 300 mg CBD",
+                        "description": "",
+                        "price": "€29.90"
+                    },
+                    {
+                        "name": "Pure CBD Restoring Balm 45 ml/400 Mg CBD",
+                        "description": "",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Pure CBD - CBG Oil 5% CBG-2.5% CBD",
+                        "description": "",
+                        "price": "€45.00"
+                    },
+                    {
+                        "name": "Pure CBD Heating Balm",
+                        "description": "",
+                        "price": "€17.90"
+                    },
+                    {
+                        "name": "Pure CBD Lip Balm",
+                        "description": "",
+                        "price": "€9.90"
+                    },
+                    {
+                        "name": "Pure CBD Oil 10%",
+                        "description": "",
+                        "price": "€55.00"
+                    },
+                    {
+                        "name": "Pure CBD Oil 15%",
+                        "description": "",
+                        "price": "€75.00"
+                    },
+                    {
+                        "name": "Pure CBD Oil 20%",
+                        "description": "",
+                        "price": "€109.00"
+                    },
+                    {
+                        "name": "Pure CBD Oil 30%",
+                        "description": "",
+                        "price": "€139.00"
+                    },
+                    {
+                        "name": "Pure CBD Oil 5%",
+                        "description": "",
+                        "price": "€35.00"
+                    },
+                    {
+                        "name": "Pure CBD - Muscle & Joint rescue cream",
+                        "description": "",
+                        "price": "€24.90"
+                    }
+                ]
+            }
+        ]
     }
 ]
