@@ -101,7 +101,8 @@ header h1#menu-title {
     margin: 0 auto;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     touch-action: pan-y;
-    overscroll-behavior-x: contain; /* Added to prevent horizontal overscroll bounce/effects */
+    overscroll-behavior-x: contain; /* You added this, which is good */
+    will-change: transform, opacity; /* Add this line */
 }
 
 /* Optional: For initial load or specific fade-only transitions if script uses it */
