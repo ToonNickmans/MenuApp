@@ -1,0 +1,279 @@
+[
+    {
+        "name": "Flowers",
+        "categories": [
+            {
+                "category": "Crown Jewels",
+                "id": "crown-jewels",
+                "items": [
+                    {
+                        "name": "Black Widow",
+                        "description": "1 g",
+                        "price": "€7.00"
+                    }
+                ]
+            },
+            {
+                "category": "Edel Weeds",
+                "id": "edel-weeds",
+                "items": [
+                    {
+                        "name": "Blue",
+                        "description": "2 g",
+                        "price": "€15.00"
+                    },
+                    {
+                        "name": "Green",
+                        "description": "10 g",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Blend",
+                        "description": "20 g",
+                        "price": "€30.00"
+                    }
+                ]
+            },
+            {
+                "category": "Jane's Garden",
+                "id": "janes-garden",
+                "items": [
+                    {
+                        "name": "Blueberry",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Buddha Cheese",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Gelato",
+                        "description": "5 g",
+                        "price": "€62.50"
+                    },
+                    {
+                        "name": "Sour Lemon",
+                        "description": "5 g",
+                        "price": "€57.50"
+                    },
+                    {
+                        "name": "Super Silver Haze",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Super Silver Haze",
+                        "description": "5 g",
+                        "price": "€57.50"
+                    },
+                    {
+                        "name": "White Widow",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    }
+                ]
+            },
+            {
+                "category": "King Kush",
+                "id": "king-kush",
+                "items": [
+                    {
+                        "name": "Caramello",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Caramello",
+                        "description": "4 g",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Chocolope",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Chocolope",
+                        "description": "4 g",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Critical Kush",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Critical Kush",
+                        "description": "4 g",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Lemon Haze",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "SoMango",
+                        "description": "2 g",
+                        "price": "€21.90"
+                    },
+                    {
+                        "name": "SoMango",
+                        "description": "4 g",
+                        "price": "€40.00"
+                    },
+                    {
+                        "name": "Super Skunk",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Super Skunk",
+                        "description": "4 g",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Lemon Haze",
+                        "description": "1 g",
+                        "price": "€15.00"
+                    },
+                    {
+                        "name": "Lemon Haze",
+                        "description": "5 g",
+                        "price": "€62.50"
+                    }
+                ]
+            },
+            {
+                "category": "Sensy",
+                "id": "sensy",
+                "items": [
+                    {
+                        "name": "Blueberry",
+                        "description": "2 g",
+                        "price": "€21.90"
+                    },
+                    {
+                        "name": "Cali",
+                        "description": "5 g",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Cali",
+                        "description": "3 g",
+                        "price": "€14.00"
+                    },
+                    {
+                        "name": "OG Kush",
+                        "description": "2 g",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Super Haze",
+                        "description": "2 g",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Super Haze",
+                        "description": "1 g",
+                        "price": "€10.00"
+                    },
+                    {
+                        "name": "Vanilla Kush",
+                        "description": "2 g",
+                        "price": "€21.90"
+                    },
+                    {
+                        "name": "Weedy",
+                        "description": "5 g",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Weedy",
+                        "description": "3 g",
+                        "price": "€14.00"
+                    },
+                    {
+                        "name": "Grass",
+                        "description": "15 g",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Blend",
+                        "description": "20 g",
+                        "price": "€35.00"
+                    }
+                ]
+            },
+            {
+                "category": "Spek",
+                "id": "spek",
+                "items": [
+                    {
+                        "name": "Hawaiian Snow",
+                        "description": "3 g",
+                        "price": "€24.20"
+                    },
+                    {
+                        "name": "Kosher Kush",
+                        "description": "3 g",
+                        "price": "€24.20"
+                    },
+                    {
+                        "name": "Skywalker OG",
+                        "description": "3 g",
+                        "price": "€24.20"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Extracten",
+        "categories": [
+            {
+                "category": "Extracten",
+                "id": "extracten",
+                "items": [
+                    {
+                        "name": "Sensy - Zero Zero",
+                        "description": "1 g",
+                        "price": "€14.50"
+                    },
+                    {
+                        "name": "Sensy - Zero Zero",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "King Kush - RED",
+                        "description": "3 g",
+                        "price": "€24.20"
+                    },
+                    {
+                        "name": "King Kush - GREEN",
+                        "description": "3 g",
+                        "price": "€24.20"
+                    },
+                    {
+                        "name": "King Kush - ICE",
+                        "description": "3 g",
+                        "price": "€24.20"
+                    },
+                    {
+                        "name": "King Kush - TERP",
+                        "description": "3 g",
+                        "price": "€24.20"
+                    },
+                    {
+                        "name": "King Kush - CRUMBLE",
+                        "description": "3 g",
+                        "price": "€24.20"
+                    }
+                ]
+            }
+        ]
+    }
+]
