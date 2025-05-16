@@ -101,8 +101,10 @@ header h1#menu-title {
     margin: 0 auto;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     touch-action: pan-y;
-    overscroll-behavior-x: contain; /* You added this, which is good */
-    will-change: transform, opacity; /* Add this line */
+    overscroll-behavior-x: contain; /* From previous fix */
+    will-change: transform, opacity;  /* From previous fix */
+    transform: translateX(0);     /* Explicit default: centered */
+    opacity: 1;                 /* Explicit default: visible */
 }
 
 /* Optional: For initial load or specific fade-only transitions if script uses it */
