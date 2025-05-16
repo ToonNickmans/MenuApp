@@ -164,19 +164,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateMenuIndicators();
             }
 
+           // MODIFIED part in performContentUpdateAndTransition function:
+// ... after populateMenuContent(currentMenu, filterText); and if (menuIndicatorsContainer) { updateMenuIndicators(); } ...
+
             if (slideParams && slideParams.inClass) {
-                // Content is updated, element is off-screen (e.g., via menu-slide-in-from-right)
-                // Force reflow before removing class to trigger slide-in animation
-                requestAnimationFrame(() => { // Wait for DOM to apply off-screen class
-                    requestAnimationFrame(() => { // Next frame to ensure reflow
-                        menuContainer.classList.remove(slideParams.inClass);
-                        menuContainer.style.opacity = '1'; // Slide in and fade in
-                    });
-                });
+                // At this point, menuContainer has slideParams.inClass (e.g., transform: translateX(100%); opacity: 0;)
+                // and its content has just been updated.
+                // We want it to animate to its default state (transform: translateX(0); opacity: 1;).
+                // The transition property on #menu-container will handle this.
+                
+                // Ensure opacity is set to 1 for the target state of the transition
+                menuContainer.style.opacity = '1';
+                // Removing the class will trigger the transform to animate to translateX(0)
+                menuContainer.classList.remove(slideParams.inClass);
             } else {
                 // Simple fade-in for non-slide scenarios (initial load, search filter)
                 menuContainer.style.opacity = '1';
             }
+// ...
         };
 
         // Clear previous animation classes and start fade out / slide out
