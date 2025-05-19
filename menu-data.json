@@ -9,67 +9,80 @@
                     {
                         "name": "Lemon Haze",
                         "description": "1 g",
-                        "price": "€15.00"
+                        "price": "€15.00",
+                        "image": ""
                     },
                     {
                         "name": "SoMango",
                         "description": "2 g",
-                        "price": "€21.90"
+                        "price": "€21.90",
+                        "image": ""
                     },
                     {
                         "name": "Caramello",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Chocolope",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Critical Kush",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Lemon Haze",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Super Skunk",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "SoMango",
                         "description": "4 g",
-                        "price": "€40.00"
+                        "price": "€40.00",
+                        "image": ""
                     },
                     {
                         "name": "Caramello",
                         "description": "4 g",
-                        "price": "€50.00"
+                        "price": "€50.00",
+                        "image": ""
                     },
                     {
                         "name": "Chocolope",
                         "description": "4 g",
-                        "price": "€50.00"
+                        "price": "€50.00",
+                        "image": ""
                     },
                     {
                         "name": "Critical Kush",
                         "description": "4 g",
-                        "price": "€50.00"
+                        "price": "€50.00",
+                        "image": ""
                     },
                     {
                         "name": "Super Skunk",
                         "description": "4 g",
-                        "price": "€50.00"
+                        "price": "€50.00",
+                        "image": ""
                     },
                     {
                         "name": "Lemon Haze",
                         "description": "5 g",
-                        "price": "€62.50"
+                        "price": "€62.50",
+                        "image": ""
                     }
                 ]
             },
@@ -80,37 +93,44 @@
                     {
                         "name": "Blueberry",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Buddha Cheese",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Super Silver Haze",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "White Widow",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Sour Lemon",
                         "description": "5 g",
-                        "price": "€57.50"
+                        "price": "€57.50",
+                        "image": ""
                     },
                     {
                         "name": "Super Silver Haze",
                         "description": "5 g",
-                        "price": "€57.50"
+                        "price": "€57.50",
+                        "image": ""
                     },
                     {
                         "name": "Gelato",
                         "description": "5 g",
-                        "price": "€62.50"
+                        "price": "€62.50",
+                        "image": ""
                     }
                 ]
             },
@@ -121,57 +141,68 @@
                     {
                         "name": "Super Haze",
                         "description": "1 g",
-                        "price": "€10.00"
+                        "price": "€10.00",
+                        "image": ""
                     },
                     {
                         "name": "Cali",
                         "description": "3 g",
-                        "price": "€14.00"
+                        "price": "€14.00",
+                        "image": ""
                     },
                     {
                         "name": "Weedy",
                         "description": "3 g",
-                        "price": "€14.00"
+                        "price": "€14.00",
+                        "image": ""
                     },
                     {
                         "name": "OG Kush",
                         "description": "2 g",
-                        "price": "€19.90"
+                        "price": "€19.90",
+                        "image": ""
                     },
                     {
                         "name": "Super Haze",
                         "description": "2 g",
-                        "price": "€19.90"
+                        "price": "€19.90",
+                        "image": ""
                     },
                     {
                         "name": "Grass",
                         "description": "15 g",
-                        "price": "€19.90"
+                        "price": "€19.90",
+                        "image": ""
                     },
                     {
                         "name": "Cali",
                         "description": "5 g",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "Weedy",
                         "description": "5 g",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "Blueberry",
                         "description": "2 g",
-                        "price": "€21.90"
+                        "price": "€21.90",
+                        "image": ""
                     },
                     {
                         "name": "Vanilla Kush",
                         "description": "2 g",
-                        "price": "€21.90"
+                        "price": "€21.90",
+                        "image": ""
                     },
                     {
                         "name": "Blend",
                         "description": "20 g",
-                        "price": "€35.00"
+                        "price": "€35.00",
+                        "image": ""
                     }
                 ]
             },
@@ -182,17 +213,20 @@
                     {
                         "name": "Blue",
                         "description": "2 g",
-                        "price": "€15.00"
+                        "price": "€15.00",
+                        "image": ""
                     },
                     {
                         "name": "Green",
                         "description": "10 g",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "Blend",
                         "description": "20 g",
-                        "price": "€30.00"
+                        "price": "€30.00",
+                        "image": ""
                     }
                 ]
             },
@@ -203,7 +237,8 @@
                     {
                         "name": "Black Widow",
                         "description": "1 g",
-                        "price": "€7.00"
+                        "price": "€7.00",
+                        "image": ""
                     }
                 ]
             },
@@ -214,17 +249,20 @@
                     {
                         "name": "Hawaiian Snow",
                         "description": "3 g",
-                        "price": "€24.20"
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "Kosher Kush",
                         "description": "3 g",
-                        "price": "€24.20"
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "Skywalker OG",
                         "description": "3 g",
-                        "price": "€24.20"
+                        "price": "€24.20",
+                        "image": ""
                     }
                 ]
             }
@@ -240,37 +278,661 @@
                     {
                         "name": "Sensy - Zero Zero",
                         "description": "1 g",
-                        "price": "€14.50"
+                        "price": "€14.50",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - RED",
                         "description": "3 g",
-                        "price": "€24.20"
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - GREEN",
                         "description": "3 g",
-                        "price": "€24.20"
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - ICE",
                         "description": "3 g",
-                        "price": "€24.20"
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - TERP",
                         "description": "3 g",
-                        "price": "€24.20"
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - CRUMBLE",
                         "description": "3 g",
-                        "price": "€24.20"
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "Sensy - Zero Zero",
                         "description": "2 g",
-                        "price": "€26.00"
+                        "price": "€26.00",
+                        "image": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Vaporizers",
+        "categories": [
+            {
+                "category": "HIGHER STANDARDS",
+                "id": "higher-standards",
+                "items": [
+                    {
+                        "name": "dot wipes",
+                        "description": "Cleaning dot wipes by Higher Standards for vaporizers and accessories.",
+                        "price": "€1.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "DYNAVAP",
+                "id": "dynavap",
+                "items": [
+                    {
+                        "name": "Vape Wool Hemp Fibres",
+                        "description": "Vape Wool degummed hemp fibres for use with vaporizers by Dynavap.",
+                        "price": "€2.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Roller Pipe Aluminium Violet",
+                        "description": "Aluminium roller pipe in Violet, an accessory by Dynavap.",
+                        "price": "€8.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Spare Part 'the cap for dynavap'",
+                        "description": "Replacement 'The Cap' spare part for Dynavap vaporizers.",
+                        "price": "€27.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "B Stainless Steel (Black)",
+                        "description": "The 'B' stainless steel vaporizer in Black by Dynavap.",
+                        "price": "€49.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "B Stainless Steel (Blue)",
+                        "description": "The 'B' stainless steel vaporizer in Blue by Dynavap.",
+                        "price": "€49.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Magnetic induction heater for vaporizers",
+                        "description": "Magnetic induction heater accessory for Dynavap vaporizers.",
+                        "price": "€84.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "M Plus vaporizer",
+                        "description": "The 'M Plus' vaporizer device by Dynavap.",
+                        "price": "€85.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "STORZ & BICKEL",
+                "id": "storz-bickel",
+                "items": [
+                    {
+                        "name": "screen set for hybid/crafty/mighty/plenty/easy",
+                        "description": "Screen set for Hybrid, Crafty, Mighty, Plenty, and Easy Valve vaporizers by Storz & Bickel.",
+                        "price": "€5.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Capsule caddy container for herbs",
+                        "description": "Capsule caddy container for herbs by Storz & Bickel.",
+                        "price": "€6.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Liquid pads for volcano crafty mighty plenty",
+                        "description": "Liquid pads for Volcano, Crafty, Mighty, and Plenty vaporizers by Storz & Bickel.",
+                        "price": "€6.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mighty seal ring set",
+                        "description": "Seal ring set for the Mighty vaporizer by Storz & Bickel.",
+                        "price": "€7.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Magazine with 8 dosing capsules for herbs",
+                        "description": "Magazine with 8 dosing capsules for herbs by Storz & Bickel.",
+                        "price": "€11.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Bong adapter for crafty & Mighty",
+                        "description": "Bong adapter for Crafty & Mighty vaporizers by Storz & Bickel.",
+                        "price": "€12.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mouthpieces for crafty and mighty",
+                        "description": "Replacement mouthpieces for Crafty and Mighty vaporizers by Storz & Bickel.",
+                        "price": "€16.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Dosing capsules set of 40 for herbs",
+                        "description": "Set of 40 dosing capsules for herbs by Storz & Bickel.",
+                        "price": "€21.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Volcano filling chamber reducer",
+                        "description": "Filling chamber reducer for Volcano vaporizers by Storz & Bickel.",
+                        "price": "€22.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Magazine with 8 dosing capsules for liquids",
+                        "description": "Magazine with 8 dosing capsules for liquids by Storz & Bickel.",
+                        "price": "€24.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mighty Cooling unit set",
+                        "description": "Cooling unit set for the Mighty vaporizer by Storz & Bickel.",
+                        "price": "€29.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mighty Wear and tear set",
+                        "description": "Wear and tear set for the Mighty vaporizer by Storz & Bickel.",
+                        "price": "€44.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Crafty Cooling unit set",
+                        "description": "Cooling unit set for the Crafty vaporizer by Storz & Bickel.",
+                        "price": "€49.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Filling set for 40 dosing capsules",
+                        "description": "Filling set for 40 dosing capsules by Storz & Bickel.",
+                        "price": "€79.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Plenty",
+                        "description": "Plenty plug-in vaporizer by Storz & Bickel.",
+                        "price": "€249.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Crafty +",
+                        "description": "Crafty+ portable vaporizer by Storz & Bickel.",
+                        "price": "€298.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mighty (normal)",
+                        "description": "Mighty portable vaporizer (original model) by Storz & Bickel.",
+                        "price": "€299.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mighty +",
+                        "description": "Mighty+ portable vaporizer (updated model) by Storz & Bickel.",
+                        "price": "€349.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Venty",
+                        "description": "Venty portable vaporizer by Storz & Bickel.",
+                        "price": "€449.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "Black Leaf",
+                "id": "black-leaf",
+                "items": [
+                    {
+                        "name": "Glass shisha Mouth-piece adapter",
+                        "description": "Glass shisha mouth-piece adapter by Black Leaf.",
+                        "price": "€7.50",
+                        "image": ""
+                    },
+                    {
+                        "name": "Glass mouthpiece for mighty + crafty",
+                        "description": "Glass mouthpiece accessory for Mighty & Crafty vaporizers by Black Leaf.",
+                        "price": "€9.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Easy valve balloon with adaptor",
+                        "description": "Easy valve balloon with adaptor, compatible with Volcano, by Black Leaf.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Vaporizer water chambre Dome perco",
+                        "description": "Vaporizer water chamber with dome percolator by Black Leaf.",
+                        "price": "€26.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Herbpod Vaporizer black",
+                        "description": "Herbpod portable vaporizer in black by Black Leaf.",
+                        "price": "€50.90",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "PAX",
+                "id": "pax",
+                "items": [
+                    {
+                        "name": "3D screens",
+                        "description": "Set of 3D screens for PAX vaporizers.",
+                        "price": "€10.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Oven Lid",
+                        "description": "Replacement oven lid for PAX vaporizers.",
+                        "price": "€13.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Grip Sleeve - Onyx (black)",
+                        "description": "Grip sleeve in Onyx (black) for PAX vaporizers.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Grip Sleeve - Sage (green)",
+                        "description": "Grip sleeve in Sage (green) for PAX vaporizers.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Screens",
+                        "description": "Replacement screens for PAX vaporizers.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Water pipe adaptor",
+                        "description": "Water pipe adaptor for PAX vaporizers.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Keychain Multitool",
+                        "description": "Keychain multitool for PAX vaporizers.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Grip Sleeve – Periwinkle (violet)",
+                        "description": "Grip sleeve in Periwinkle (violet) for PAX vaporizers.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Grip Sleeve – Lavender",
+                        "description": "Grip sleeve in Lavender for PAX vaporizers.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Half pack oven",
+                        "description": "Half-pack oven lid accessory for PAX vaporizers.",
+                        "price": "€16.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mouthpiece Raised",
+                        "description": "Raised mouthpiece accessory for PAX vaporizers.",
+                        "price": "€16.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mouthpiece Flat",
+                        "description": "Flat mouthpiece accessory for PAX vaporizers.",
+                        "price": "€16.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Maintenance Kit",
+                        "description": "Maintenance kit for PAX vaporizers.",
+                        "price": "€20.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "PAX Puck press",
+                        "description": "Puck press accessory for PAX vaporizers.",
+                        "price": "€20.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Budkups 3 Stuks",
+                        "description": "Set of 3 BudKups for PAX vaporizers.",
+                        "price": "€25.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Mini Charger",
+                        "description": "Mini charger for PAX vaporizers.",
+                        "price": "€25.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Charging Tray - White",
+                        "description": "Charging tray in White for PAX vaporizers.",
+                        "price": "€35.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Charging Tray – Walnut",
+                        "description": "Charging tray in Walnut for PAX vaporizers.",
+                        "price": "€35.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Pax Prep Tray",
+                        "description": "Preparation tray accessory for PAX vaporizers.",
+                        "price": "€40.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Concentrate insert for PAX 3",
+                        "description": "Concentrate insert accessory for the PAX 3 vaporizer.",
+                        "price": "€44.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Budkups Case 6 stuks",
+                        "description": "Case with 6 BudKups for PAX vaporizers.",
+                        "price": "€45.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Budkups Plus (6stuks, container, tools, terpeshield)",
+                        "description": "BudKups Plus set for PAX: 6 kups, container, tools, and terpeshield.",
+                        "price": "€59.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Pax Mini - Onyx (black)",
+                        "description": "Pax Mini vaporizer in Onyx (black).",
+                        "price": "€150.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Pax Mini - Poppy",
+                        "description": "Pax Mini vaporizer in Poppy.",
+                        "price": "€150.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Pax Mini - platinum",
+                        "description": "Pax Mini vaporizer in Platinum.",
+                        "price": "€150.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "PAX 3 Device Basic - Burgundy",
+                        "description": "PAX 3 basic device in Burgundy.",
+                        "price": "€169.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "PAX 3 Device Basic - Onyx",
+                        "description": "PAX 3 basic device in Onyx.",
+                        "price": "€169.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "PAX Plus - Sage Basic Device",
+                        "description": "PAX Plus basic vaporizer device in Sage.",
+                        "price": "€169.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "PAX 3 Device Basic - Sand",
+                        "description": "PAX 3 basic device in Sand.",
+                        "price": "€169.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "PAX 3 Complete kit - Onyx",
+                        "description": "PAX 3 complete vaporizer kit in Onyx.",
+                        "price": "€199.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "PAX 3 Complete kit - Sand",
+                        "description": "PAX 3 complete vaporizer kit in Sand.",
+                        "price": "€199.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "PAX Plus - Onyx Complete Kit",
+                        "description": "PAX Plus complete vaporizer kit in Onyx.",
+                        "price": "€199.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "FireFly",
+                "id": "firefly",
+                "items": [
+                    {
+                        "name": "FireFly 2 charging dock",
+                        "description": "Charging dock for the FireFly 2 vaporizer.",
+                        "price": "€30.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "PUFFCO",
+                "id": "puffco",
+                "items": [
+                    {
+                        "name": "Chamber for Plus Vaporizers Onyx",
+                        "description": "Replacement chamber in Onyx for Puffco Plus vaporizers.",
+                        "price": "€39.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Plus Portable Vaporizer Silver",
+                        "description": "Plus portable concentrate vaporizer in Silver by Puffco.",
+                        "price": "€89.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Hot knife Onyx Dabbing Tool",
+                        "description": "Hot Knife electronic dabbing tool in Onyx by Puffco.",
+                        "price": "€99.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Cupsy Coffee Cup Bong Black",
+                        "description": "Cupsy discreet coffee cup bong in Black by Puffco.",
+                        "price": "€99.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Plus Portable Vaporizer Pearl",
+                        "description": "Plus portable concentrate vaporizer in Pearl by Puffco.",
+                        "price": "€99.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Peak pro 3D chamber",
+                        "description": "3D chamber for the Puffco Peak Pro.",
+                        "price": "€114.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Peak pro 3D XL chamber",
+                        "description": "3D XL chamber for the Puffco Peak Pro.",
+                        "price": "€124.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Pivot portable concentrates vaporizer Onyx",
+                        "description": "Pivot portable concentrates vaporizer in Onyx by Puffco.",
+                        "price": "€169.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Peak Concentrate Portable Vaporizer",
+                        "description": "Peak portable concentrate vaporizer by Puffco.",
+                        "price": "€289.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Proxy",
+                        "description": "Proxy modular vaporizer device by Puffco.",
+                        "price": "€379.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "NEW peak pro concentrate vaporizer flourish",
+                        "description": "New Peak Pro concentrate vaporizer in Flourish edition by Puffco.",
+                        "price": "€469.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "X VAPE",
+                "id": "x-vape",
+                "items": [
+                    {
+                        "name": "XMax Oont Vaporizer black",
+                        "description": "Oont portable vaporizer in black by XMax (X-Vape).",
+                        "price": "€48.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Avant Red",
+                        "description": "Avant portable vaporizer in Red by X-Vape.",
+                        "price": "€64.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "X-Max V3 Pro Blue",
+                        "description": "X-Max V3 Pro portable vaporizer in Blue by X-Vape.",
+                        "price": "€99.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "X-Max ACE Black",
+                        "description": "X-Max ACE portable vaporizer in Black by X-Vape.",
+                        "price": "€99.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "G-Pen",
+                "id": "g-pen",
+                "items": [
+                    {
+                        "name": "Dash vaporizer - Cookies special edition",
+                        "description": "Dash portable vaporizer, Cookies special edition by G-Pen.",
+                        "price": "€90.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Dash vaporizer - Tyson special edition",
+                        "description": "Dash portable vaporizer, Tyson special edition by G-Pen.",
+                        "price": "€90.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Dash vaporizer - Grateful dead edition",
+                        "description": "Dash portable vaporizer, Grateful Dead edition by G-Pen.",
+                        "price": "€90.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "DAVINCI",
+                "id": "davinci",
+                "items": [
+                    {
+                        "name": "miqro amethyst",
+                        "description": "Miqro portable vaporizer in Amethyst by DaVinci.",
+                        "price": "€129.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Miqro C Green",
+                        "description": "Miqro-C portable vaporizer in Green by DaVinci.",
+                        "price": "€129.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "miqro rust",
+                        "description": "Miqro portable vaporizer in Rust by DaVinci.",
+                        "price": "€129.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "miqro dry herb vaporizer Orange",
+                        "description": "Miqro dry herb portable vaporizer in Orange by DaVinci.",
+                        "price": "€139.00",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "category": "STUNDENGLASS",
+                "id": "stundenglass",
+                "items": [
+                    {
+                        "name": "Mouthpiece Gravity",
+                        "description": "Gravity mouthpiece for Stündenglass devices.",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Pineapple globe",
+                        "description": "Pineapple globe accessory for Stündenglass gravity hookah.",
+                        "price": "€75.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Compact Edition Gravity Hookah",
+                        "description": "Compact Edition Gravity Hookah by Stündenglass.",
+                        "price": "€499.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Gravity Hookah X Dr Greenthumb's",
+                        "description": "Gravity Hookah, Dr. Greenthumb's edition by Stündenglass.",
+                        "price": "€499.00",
+                        "image": ""
                     }
                 ]
             }
@@ -286,47 +948,56 @@
                     {
                         "name": "Black Leaf - Acrylic 3 parts + storage compartment",
                         "description": "Violet",
-                        "price": "€2.90"
+                        "price": "€2.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Acrylic 3 parts + storage compartment",
                         "description": "Red",
-                        "price": "€2.90"
+                        "price": "€2.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Acrylic 3 parts + storage compartment",
                         "description": "Blue",
-                        "price": "€2.90"
+                        "price": "€2.90",
+                        "image": ""
                     },
                     {
                         "name": "Akra - Dreamliner",
                         "description": "Various Colours",
-                        "price": "€3.00"
+                        "price": "€3.00",
+                        "image": ""
                     },
                     {
                         "name": "Best Buds - Eco",
                         "description": "Cookies 'n cream",
-                        "price": "€4.90"
+                        "price": "€4.90",
+                        "image": ""
                     },
                     {
                         "name": "Best Buds - Eco",
                         "description": "Kosher Kush",
-                        "price": "€4.90"
+                        "price": "€4.90",
+                        "image": ""
                     },
                     {
                         "name": "Mascotte Plastic",
                         "description": "Clear",
-                        "price": "€7.00"
+                        "price": "€7.00",
+                        "image": ""
                     },
                     {
                         "name": "Santa Cruz Cookies 55 mm",
                         "description": "Red or Blue",
-                        "price": "€10.90"
+                        "price": "€10.90",
+                        "image": ""
                     },
                     {
                         "name": "All in one pocket graffiti combie",
                         "description": "Various Colours",
-                        "price": "€15.00"
+                        "price": "€15.00",
+                        "image": ""
                     }
                 ]
             },
@@ -337,157 +1008,188 @@
                     {
                         "name": "Black Leaf - Grinder 2-part",
                         "description": "Gold",
-                        "price": "€8.90"
+                        "price": "€8.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Grinder 2-part",
                         "description": "Silver",
-                        "price": "€8.90"
+                        "price": "€8.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Grinder 2-part",
                         "description": "Grey",
-                        "price": "€8.90"
+                        "price": "€8.90",
+                        "image": ""
                     },
                     {
                         "name": "Champ High - Original leaf",
                         "description": "40mm",
-                        "price": "€9.90"
+                        "price": "€9.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Grinder 4-part",
                         "description": "Gold",
-                        "price": "€14.90"
+                        "price": "€14.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Grinder 4-part",
                         "description": "Red",
-                        "price": "€14.90"
+                        "price": "€14.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Grinder 4-part",
                         "description": "Grey",
-                        "price": "€14.90"
+                        "price": "€14.90",
+                        "image": ""
                     },
                     {
                         "name": "Mascotte Design egg",
                         "description": "Silver",
-                        "price": "€15.00"
+                        "price": "€15.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - 4-part",
                         "description": "Blue",
-                        "price": "€17.90"
+                        "price": "€17.90",
+                        "image": ""
                     },
                     {
                         "name": "Best Buds - Mighty Alu Rose 4 parts (60 mm)",
                         "description": "Gold",
-                        "price": "€19.90"
+                        "price": "€19.90",
+                        "image": ""
                     },
                     {
                         "name": "Best Buds - Mighty Alu 4 parts (60 mm)",
                         "description": "Silver Gold",
-                        "price": "€19.90"
+                        "price": "€19.90",
+                        "image": ""
                     },
                     {
                         "name": "Best Buds - Mighty Alu 4 parts (60 mm)",
                         "description": "Black",
-                        "price": "€19.90"
+                        "price": "€19.90",
+                        "image": ""
                     },
                     {
                         "name": "Super puff - classic",
                         "description": "Gold",
-                        "price": "€19.95"
+                        "price": "€19.95",
+                        "image": ""
                     },
                     {
                         "name": "Super puff - classic",
                         "description": "Blue",
-                        "price": "€19.95"
+                        "price": "€19.95",
+                        "image": ""
                     },
                     {
                         "name": "Mascotte 4 Layer Expert Compact",
                         "description": "Black",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "RAW - Hammer craft Small Alu 50 mm",
                         "description": "Black",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "The bulldog Grinder 3 layers",
                         "description": "Grey",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "HGHLF 4 piece SMALL",
                         "description": "assorted colours",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "HGHLF 2 piece SMALL",
                         "description": "Black",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "Super puff - black",
                         "description": "Blue",
-                        "price": "€22.95"
+                        "price": "€22.95",
+                        "image": ""
                     },
                     {
                         "name": "Super puff - black",
                         "description": "Gold",
-                        "price": "€22.95"
+                        "price": "€22.95",
+                        "image": ""
                     },
                     {
                         "name": "Tyson 2.0 Amsterdam 2 parts (54mm)",
                         "description": "Black",
-                        "price": "€24.90"
+                        "price": "€24.90",
+                        "image": ""
                     },
                     {
                         "name": "Super puff - Lightning",
                         "description": "Blue",
-                        "price": "€24.95"
+                        "price": "€24.95",
+                        "image": ""
                     },
                     {
                         "name": "Super puff - Lightning",
                         "description": "Gold",
-                        "price": "€24.95"
+                        "price": "€24.95",
+                        "image": ""
                     },
                     {
                         "name": "Champ - Compact 4 layer",
                         "description": "assorted colours",
-                        "price": "€25.00"
+                        "price": "€25.00",
+                        "image": ""
                     },
                     {
                         "name": "Super puff - 5 piece",
                         "description": "Blue",
-                        "price": "€29.95"
+                        "price": "€29.95",
+                        "image": ""
                     },
                     {
                         "name": "Super puff - 5 piece",
                         "description": "Gold",
-                        "price": "€29.95"
+                        "price": "€29.95",
+                        "image": ""
                     },
                     {
                         "name": "Champ High - Golden Leaf",
                         "description": "Black",
-                        "price": "€30.00"
+                        "price": "€30.00",
+                        "image": ""
                     },
                     {
                         "name": "HGHLF 4 piece",
                         "description": "assorted colours",
-                        "price": "€40.00"
+                        "price": "€40.00",
+                        "image": ""
                     },
                     {
                         "name": "Krush Kube - 2.0 2 Parts - 55mm",
                         "description": "Rose",
-                        "price": "€45.00"
+                        "price": "€45.00",
+                        "image": ""
                     },
                     {
                         "name": "Krush Kube - 2.0 2 Parts - 55mm",
                         "description": "Grey",
-                        "price": "€45.00"
+                        "price": "€45.00",
+                        "image": ""
                     }
                 ]
             },
@@ -498,22 +1200,26 @@
                     {
                         "name": "Super puff - Sativa Days indica nights",
                         "description": "Wood",
-                        "price": "€12.95"
+                        "price": "€12.95",
+                        "image": ""
                     },
                     {
                         "name": "Champ - wooden 60mm",
                         "description": "Wood",
-                        "price": "€27.50"
+                        "price": "€27.50",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Alu/wooden 4 part",
                         "description": "Wooden",
-                        "price": "€30.90"
+                        "price": "€30.90",
+                        "image": ""
                     },
                     {
                         "name": "Marley - natural 4 Piece Small",
                         "description": "black walnut",
-                        "price": "€80.00"
+                        "price": "€80.00",
+                        "image": ""
                     }
                 ]
             },
@@ -524,12 +1230,14 @@
                     {
                         "name": "Electronic Grinder - Chewy G3 Deluxe",
                         "description": "Black",
-                        "price": "€99.00"
+                        "price": "€99.00",
+                        "image": ""
                     },
                     {
                         "name": "Otto grinder - Banana bros",
                         "description": "White",
-                        "price": "€129.99"
+                        "price": "€129.99",
+                        "image": ""
                     }
                 ]
             }
@@ -545,77 +1253,92 @@
                     {
                         "name": "Black Leaf - Hole diffuser chillum 120 mm",
                         "description": "",
-                        "price": "€4.90"
+                        "price": "€4.90",
+                        "image": ""
                     },
                     {
                         "name": "Replacement quartz dab banger 14mm",
                         "description": "",
-                        "price": "€6.00"
+                        "price": "€6.00",
+                        "image": ""
                     },
                     {
                         "name": "Blaze slit diffuser",
                         "description": "",
-                        "price": "€6.90"
+                        "price": "€6.90",
+                        "image": ""
                     },
                     {
                         "name": "Black bong glass bowl holder",
                         "description": "dual size 14 en 18 mm",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Double snake black bong glass bowl 18 mm",
                         "description": "",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Double snake clear bong glass bowl 18 mm",
                         "description": "",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Double snake green bong glass bowl 18 mm",
                         "description": "",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Green bong glass bowl holder",
                         "description": "dual size 14 en 18 mm",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Bowl for Black Leaf glass bong",
                         "description": "50mm 14mm",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Transparant bong glass bowl holder",
                         "description": "dual size 14 en 18 mm",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Dark lord green glass bong bowl",
                         "description": "Green",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Bowl for glass bong",
                         "description": "14mm Blue",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Dark lord Blue glass bong bowl",
                         "description": "18mm",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Dab pencil tool",
                         "description": "",
-                        "price": "€8.50"
+                        "price": "€8.50",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Chillum",
                         "description": "30cm",
-                        "price": "€15.00"
+                        "price": "€15.00",
+                        "image": ""
                     }
                 ]
             },
@@ -626,87 +1349,104 @@
                     {
                         "name": "Smoking Pipe Wood dark 80mm",
                         "description": "",
-                        "price": "€4.90"
+                        "price": "€4.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Glass Shotgun Smoking Pipe",
                         "description": "",
-                        "price": "€5.00"
+                        "price": "€5.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf Oil Pipe 120mm",
                         "description": "",
-                        "price": "€5.90"
+                        "price": "€5.90",
+                        "image": ""
                     },
                     {
                         "name": "Champ High - Pipe (Cosmos & Leaf)",
                         "description": "",
-                        "price": "€6.00"
+                        "price": "€6.00",
+                        "image": ""
                     },
                     {
                         "name": "Dreamliner tar catching dry pipe",
                         "description": "",
-                        "price": "€6.00"
+                        "price": "€6.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Glass Oil Pipe",
                         "description": "",
-                        "price": "€7.50"
+                        "price": "€7.50",
+                        "image": ""
                     },
                     {
                         "name": "Champ High - Pipe (Pool glass black)",
                         "description": "",
-                        "price": "€7.90"
+                        "price": "€7.90",
+                        "image": ""
                     },
                     {
                         "name": "Champ High - Pipe (Seahorse)",
                         "description": "",
-                        "price": "€7.90"
+                        "price": "€7.90",
+                        "image": ""
                     },
                     {
                         "name": "Pipe - Glass pipe yellow bee",
                         "description": "",
-                        "price": "€12.00"
+                        "price": "€12.00",
+                        "image": ""
                     },
                     {
                         "name": "Breit Drops Hand Pipe with Filter Adapter",
                         "description": "",
-                        "price": "€12.00"
+                        "price": "€12.00",
+                        "image": ""
                     },
                     {
                         "name": "Champ High - Glass Original Pipe",
                         "description": "Clear",
-                        "price": "€17.00"
+                        "price": "€17.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Gandalf smoking pipe",
                         "description": "medium amber",
-                        "price": "€18.90"
+                        "price": "€18.90",
+                        "image": ""
                     },
                     {
                         "name": "Champ High - Pills Pipe colors",
                         "description": "Various Colours",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "Marley Natural - Taster smoked glass",
                         "description": "",
-                        "price": "€29.00"
+                        "price": "€29.00",
+                        "image": ""
                     },
                     {
                         "name": "K. Haring - Spoon Pipe",
                         "description": "",
-                        "price": "€50.00"
+                        "price": "€50.00",
+                        "image": ""
                     },
                     {
                         "name": "Marley Natural - Steam Roller Smoked glass",
                         "description": "",
-                        "price": "€55.00"
+                        "price": "€55.00",
+                        "image": ""
                     },
                     {
                         "name": "Marley - natural water pipe",
                         "description": "",
-                        "price": "€220.00"
+                        "price": "€220.00",
+                        "image": ""
                     }
                 ]
             },
@@ -717,207 +1457,248 @@
                     {
                         "name": "Mini Bar Glass bottle Bong",
                         "description": "",
-                        "price": "€5.50"
+                        "price": "€5.50",
+                        "image": ""
                     },
                     {
                         "name": "Champ High - Skull Silicone Bong Mix Colors",
                         "description": "",
-                        "price": "€9.90"
+                        "price": "€9.90",
+                        "image": ""
                     },
                     {
                         "name": "Crystal Bubbler glass pipe",
                         "description": "blue",
-                        "price": "€12.90"
+                        "price": "€12.90",
+                        "image": ""
                     },
                     {
                         "name": "Crystal Bubbler glass pipe black",
                         "description": "",
-                        "price": "€12.90"
+                        "price": "€12.90",
+                        "image": ""
                     },
                     {
                         "name": "Bong - BREIT Ice bong jetstream",
                         "description": "",
-                        "price": "€15.00"
+                        "price": "€15.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf Oil Bong with Banger Red 180mm",
                         "description": "",
-                        "price": "€18.00"
+                        "price": "€18.00",
+                        "image": ""
                     },
                     {
                         "name": "Black leaf - Bong SCULPY glass BLUE",
                         "description": "",
-                        "price": "€18.90"
+                        "price": "€18.90",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Space hero Grey Silicone bong",
                         "description": "15cm",
-                        "price": "€20.00"
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Black Leaf glass",
                         "description": "30cm",
-                        "price": "€20.90"
+                        "price": "€20.90",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Black Leaf oil/herb Bubbler eye",
                         "description": "with banger",
-                        "price": "€20.90"
+                        "price": "€20.90",
+                        "image": ""
                     },
                     {
                         "name": "Bong - BREIT Ice bong with kickhole",
                         "description": "",
-                        "price": "€20.90"
+                        "price": "€20.90",
+                        "image": ""
                     },
                     {
                         "name": "Bong - BREIT ZickZack with diffuser chillum",
                         "description": "",
-                        "price": "€20.90"
+                        "price": "€20.90",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Spaceman White silicone bong",
                         "description": "15cm",
-                        "price": "€25.00"
+                        "price": "€25.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - BREITseite cylinderbong ICE",
                         "description": "",
-                        "price": "€25.90"
+                        "price": "€25.90",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Alien Octopus Glass-Silicone",
                         "description": "20cm",
-                        "price": "€27.50"
+                        "price": "€27.50",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Black leaf percolator icebong",
                         "description": "Blue",
-                        "price": "€30.90"
+                        "price": "€30.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Glass cup bong SEX + WEED",
                         "description": "",
-                        "price": "€30.90"
+                        "price": "€30.90",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Pop art Glass",
                         "description": "26 cm",
-                        "price": "€32.50"
+                        "price": "€32.50",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Black leaf percolator icebong with kickhole",
                         "description": "",
-                        "price": "€35.90"
+                        "price": "€35.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Beaker Bong Mini Ice Pink",
                         "description": "",
-                        "price": "€36.90"
+                        "price": "€36.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Beaker Bong Mini Ice Aquamarine",
                         "description": "",
-                        "price": "€36.90"
+                        "price": "€36.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Beaker Bong Mini Ice Blue",
                         "description": "",
-                        "price": "€36.90"
+                        "price": "€36.90",
+                        "image": ""
                     },
                     {
                         "name": "Rick and Morty Girl Handcrafted Glass Bong 25cm",
                         "description": "",
-                        "price": "€45.00"
+                        "price": "€45.00",
+                        "image": ""
                     },
                     {
                         "name": "Rick and Morty Guy Handcrafted Glass Bong 25cm",
                         "description": "",
-                        "price": "€45.00"
+                        "price": "€45.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Nautilus 22' bong w slit diffuser blue",
                         "description": "",
-                        "price": "€48.00"
+                        "price": "€48.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf Bong UFO Percolater Bong With Banger",
                         "description": "",
-                        "price": "€48.00"
+                        "price": "€48.00",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Zombie chaser Machine bong w. kickhole",
                         "description": "",
-                        "price": "€48.90"
+                        "price": "€48.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Glass cylinder bong skull",
                         "description": "",
-                        "price": "€48.90"
+                        "price": "€48.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Glass Multi level bong Percolator Ice AMBER",
                         "description": "",
-                        "price": "€48.90"
+                        "price": "€48.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Glass Multi level bong Percolator Ice BLACK",
                         "description": "",
-                        "price": "€48.90"
+                        "price": "€48.90",
+                        "image": ""
                     },
                     {
                         "name": "Black Leaf - Glass Multi level bong Percolator Ice BLUE",
                         "description": "",
-                        "price": "€48.90"
+                        "price": "€48.90",
+                        "image": ""
                     },
                     {
                         "name": "Eyce beaker",
                         "description": "Various Colours",
-                        "price": "€70.00"
+                        "price": "€70.00",
+                        "image": ""
                     },
                     {
                         "name": "Eyce silicone dab rig",
                         "description": "",
-                        "price": "€70.00"
+                        "price": "€70.00",
+                        "image": ""
                     },
                     {
                         "name": "Bong - Weed Vuittton Classy Glass Bong",
                         "description": "32cm",
-                        "price": "€89.00"
+                        "price": "€89.00",
+                        "image": ""
                     },
                     {
                         "name": "Marley - natural bubbler",
                         "description": "",
-                        "price": "€100.00"
+                        "price": "€100.00",
+                        "image": ""
                     },
                     {
                         "name": "Chill Pipe - Stainless Steel",
                         "description": "",
-                        "price": "€129.00"
+                        "price": "€129.00",
+                        "image": ""
                     },
                     {
                         "name": "Chill Pipe - Blue Gloss",
                         "description": "",
-                        "price": "€129.00"
+                        "price": "€129.00",
+                        "image": ""
                     },
                     {
                         "name": "Marley Natural - Water Pipe Smoked Glass",
                         "description": "",
-                        "price": "€140.00"
+                        "price": "€140.00",
+                        "image": ""
                     },
                     {
                         "name": "K Haring - Bubbler",
                         "description": "",
-                        "price": "€150.99"
+                        "price": "€150.99",
+                        "image": ""
                     },
                     {
                         "name": "Higher standards - rig kit",
                         "description": "Complete Kit",
-                        "price": "€170.00"
+                        "price": "€170.00",
+                        "image": ""
                     },
                     {
                         "name": "K. Haring - concentrate rig",
                         "description": "",
-                        "price": "€180.00"
+                        "price": "€180.00",
+                        "image": ""
                     }
                 ]
             }
@@ -933,67 +1714,80 @@
                     {
                         "name": "Pure CBD Lip Balm",
                         "description": "",
-                        "price": "€9.90"
+                        "price": "€9.90",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Heating Balm",
                         "description": "",
-                        "price": "€17.90"
+                        "price": "€17.90",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Restoring Balm 45 ml/400 Mg CBD",
                         "description": "",
-                        "price": "€19.90"
+                        "price": "€19.90",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD - Muscle & Joint rescue cream",
                         "description": "",
-                        "price": "€24.90"
+                        "price": "€24.90",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Balm 50ml/ 750Mg CBD",
                         "description": "",
-                        "price": "€29.90"
+                        "price": "€29.90",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Lotion 150ml / 300 mg CBD",
                         "description": "",
-                        "price": "€29.90"
+                        "price": "€29.90",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Oil 5%",
                         "description": "",
-                        "price": "€35.00"
+                        "price": "€35.00",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD - CBN Oil 5% CBN - 2.5% CBD",
                         "description": "",
-                        "price": "€45.00"
+                        "price": "€45.00",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD - CBG Oil 5% CBG-2.5% CBD",
                         "description": "",
-                        "price": "€45.00"
+                        "price": "€45.00",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Oil 10%",
                         "description": "",
-                        "price": "€55.00"
+                        "price": "€55.00",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Oil 15%",
                         "description": "",
-                        "price": "€75.00"
+                        "price": "€75.00",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Oil 20%",
                         "description": "",
-                        "price": "€109.00"
+                        "price": "€109.00",
+                        "image": ""
                     },
                     {
                         "name": "Pure CBD Oil 30%",
                         "description": "",
-                        "price": "€139.00"
+                        "price": "€139.00",
+                        "image": ""
                     }
                 ]
             }
