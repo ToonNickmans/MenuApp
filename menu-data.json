@@ -3,13 +3,175 @@
         "name": "Flowers",
         "categories": [
             {
-                "category": "Crown Jewels",
-                "id": "crown-jewels",
+                "category": "King Kush",
+                "id": "king-kush",
                 "items": [
                     {
-                        "name": "Black Widow",
+                        "name": "Lemon Haze",
                         "description": "1 g",
-                        "price": "€7.00"
+                        "price": "€15.00"
+                    },
+                    {
+                        "name": "SoMango",
+                        "description": "2 g",
+                        "price": "€21.90"
+                    },
+                    {
+                        "name": "Caramello",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Chocolope",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Critical Kush",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Lemon Haze",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Super Skunk",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "SoMango",
+                        "description": "4 g",
+                        "price": "€40.00"
+                    },
+                    {
+                        "name": "Caramello",
+                        "description": "4 g",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Chocolope",
+                        "description": "4 g",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Critical Kush",
+                        "description": "4 g",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Super Skunk",
+                        "description": "4 g",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Lemon Haze",
+                        "description": "5 g",
+                        "price": "€62.50"
+                    }
+                ]
+            },
+            {
+                "category": "Jane's Garden",
+                "id": "janes-garden",
+                "items": [
+                    {
+                        "name": "Blueberry",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Buddha Cheese",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Super Silver Haze",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "White Widow",
+                        "description": "2 g",
+                        "price": "€26.00"
+                    },
+                    {
+                        "name": "Sour Lemon",
+                        "description": "5 g",
+                        "price": "€57.50"
+                    },
+                    {
+                        "name": "Super Silver Haze",
+                        "description": "5 g",
+                        "price": "€57.50"
+                    },
+                    {
+                        "name": "Gelato",
+                        "description": "5 g",
+                        "price": "€62.50"
+                    }
+                ]
+            },
+            {
+                "category": "Sensy",
+                "id": "sensy",
+                "items": [
+                    {
+                        "name": "Super Haze",
+                        "description": "1 g",
+                        "price": "€10.00"
+                    },
+                    {
+                        "name": "Cali",
+                        "description": "3 g",
+                        "price": "€14.00"
+                    },
+                    {
+                        "name": "Weedy",
+                        "description": "3 g",
+                        "price": "€14.00"
+                    },
+                    {
+                        "name": "OG Kush",
+                        "description": "2 g",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Super Haze",
+                        "description": "2 g",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Grass",
+                        "description": "15 g",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Cali",
+                        "description": "5 g",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Weedy",
+                        "description": "5 g",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Blueberry",
+                        "description": "2 g",
+                        "price": "€21.90"
+                    },
+                    {
+                        "name": "Vanilla Kush",
+                        "description": "2 g",
+                        "price": "€21.90"
+                    },
+                    {
+                        "name": "Blend",
+                        "description": "20 g",
+                        "price": "€35.00"
                     }
                 ]
             },
@@ -35,175 +197,13 @@
                 ]
             },
             {
-                "category": "Jane's Garden",
-                "id": "janes-garden",
+                "category": "Crown Jewels",
+                "id": "crown-jewels",
                 "items": [
                     {
-                        "name": "Blueberry",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
-                        "name": "Buddha Cheese",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
-                        "name": "Gelato",
-                        "description": "5 g",
-                        "price": "€62.50"
-                    },
-                    {
-                        "name": "Sour Lemon",
-                        "description": "5 g",
-                        "price": "€57.50"
-                    },
-                    {
-                        "name": "Super Silver Haze",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
-                        "name": "Super Silver Haze",
-                        "description": "5 g",
-                        "price": "€57.50"
-                    },
-                    {
-                        "name": "White Widow",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    }
-                ]
-            },
-            {
-                "category": "King Kush",
-                "id": "king-kush",
-                "items": [
-                    {
-                        "name": "Caramello",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
-                        "name": "Caramello",
-                        "description": "4 g",
-                        "price": "€50.00"
-                    },
-                    {
-                        "name": "Chocolope",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
-                        "name": "Chocolope",
-                        "description": "4 g",
-                        "price": "€50.00"
-                    },
-                    {
-                        "name": "Critical Kush",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
-                        "name": "Critical Kush",
-                        "description": "4 g",
-                        "price": "€50.00"
-                    },
-                    {
-                        "name": "Lemon Haze",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
-                        "name": "SoMango",
-                        "description": "2 g",
-                        "price": "€21.90"
-                    },
-                    {
-                        "name": "SoMango",
-                        "description": "4 g",
-                        "price": "€40.00"
-                    },
-                    {
-                        "name": "Super Skunk",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
-                        "name": "Super Skunk",
-                        "description": "4 g",
-                        "price": "€50.00"
-                    },
-                    {
-                        "name": "Lemon Haze",
+                        "name": "Black Widow",
                         "description": "1 g",
-                        "price": "€15.00"
-                    },
-                    {
-                        "name": "Lemon Haze",
-                        "description": "5 g",
-                        "price": "€62.50"
-                    }
-                ]
-            },
-            {
-                "category": "Sensy",
-                "id": "sensy",
-                "items": [
-                    {
-                        "name": "Blueberry",
-                        "description": "2 g",
-                        "price": "€21.90"
-                    },
-                    {
-                        "name": "Cali",
-                        "description": "5 g",
-                        "price": "€20.00"
-                    },
-                    {
-                        "name": "Cali",
-                        "description": "3 g",
-                        "price": "€14.00"
-                    },
-                    {
-                        "name": "OG Kush",
-                        "description": "2 g",
-                        "price": "€19.90"
-                    },
-                    {
-                        "name": "Super Haze",
-                        "description": "2 g",
-                        "price": "€19.90"
-                    },
-                    {
-                        "name": "Super Haze",
-                        "description": "1 g",
-                        "price": "€10.00"
-                    },
-                    {
-                        "name": "Vanilla Kush",
-                        "description": "2 g",
-                        "price": "€21.90"
-                    },
-                    {
-                        "name": "Weedy",
-                        "description": "5 g",
-                        "price": "€20.00"
-                    },
-                    {
-                        "name": "Weedy",
-                        "description": "3 g",
-                        "price": "€14.00"
-                    },
-                    {
-                        "name": "Grass",
-                        "description": "15 g",
-                        "price": "€19.90"
-                    },
-                    {
-                        "name": "Blend",
-                        "description": "20 g",
-                        "price": "€35.00"
+                        "price": "€7.00"
                     }
                 ]
             },
@@ -243,11 +243,6 @@
                         "price": "€14.50"
                     },
                     {
-                        "name": "Sensy - Zero Zero",
-                        "description": "2 g",
-                        "price": "€26.00"
-                    },
-                    {
                         "name": "King Kush - RED",
                         "description": "3 g",
                         "price": "€24.20"
@@ -271,6 +266,11 @@
                         "name": "King Kush - CRUMBLE",
                         "description": "3 g",
                         "price": "€24.20"
+                    },
+                    {
+                        "name": "Sensy - Zero Zero",
+                        "description": "2 g",
+                        "price": "€26.00"
                     }
                 ]
             }
@@ -543,14 +543,24 @@
                 "id": "spare-parts",
                 "items": [
                     {
+                        "name": "Black Leaf - Hole diffuser chillum 120 mm",
+                        "description": "",
+                        "price": "€4.90"
+                    },
+                    {
+                        "name": "Replacement quartz dab banger 14mm",
+                        "description": "",
+                        "price": "€6.00"
+                    },
+                    {
+                        "name": "Blaze slit diffuser",
+                        "description": "",
+                        "price": "€6.90"
+                    },
+                    {
                         "name": "Black bong glass bowl holder",
                         "description": "dual size 14 en 18 mm",
                         "price": "€7.50"
-                    },
-                    {
-                        "name": "Black Leaf - Chillum",
-                        "description": "30cm",
-                        "price": "€15.00"
                     },
                     {
                         "name": "Double snake black bong glass bowl 18 mm",
@@ -583,16 +593,6 @@
                         "price": "€7.50"
                     },
                     {
-                        "name": "Blaze slit diffuser",
-                        "description": "",
-                        "price": "€6.90"
-                    },
-                    {
-                        "name": "Black Leaf - Hole diffuser chillum 120 mm",
-                        "description": "",
-                        "price": "€4.90"
-                    },
-                    {
                         "name": "Dark lord green glass bong bowl",
                         "description": "Green",
                         "price": "€7.50"
@@ -608,14 +608,14 @@
                         "price": "€7.50"
                     },
                     {
-                        "name": "Replacement quartz dab banger 14mm",
-                        "description": "",
-                        "price": "€6.00"
-                    },
-                    {
                         "name": "Dab pencil tool",
                         "description": "",
                         "price": "€8.50"
+                    },
+                    {
+                        "name": "Black Leaf - Chillum",
+                        "description": "30cm",
+                        "price": "€15.00"
                     }
                 ]
             },
@@ -624,19 +624,19 @@
                 "id": "pipe",
                 "items": [
                     {
-                        "name": "Black Leaf - Gandalf smoking pipe",
-                        "description": "medium amber",
-                        "price": "€18.90"
+                        "name": "Smoking Pipe Wood dark 80mm",
+                        "description": "",
+                        "price": "€4.90"
                     },
                     {
-                        "name": "Champ High - Glass Original Pipe",
-                        "description": "Clear",
-                        "price": "€17.00"
+                        "name": "Black Leaf - Glass Shotgun Smoking Pipe",
+                        "description": "",
+                        "price": "€5.00"
                     },
                     {
-                        "name": "Champ High - Pills Pipe colors",
-                        "description": "Various Colours",
-                        "price": "€20.00"
+                        "name": "Black Leaf Oil Pipe 120mm",
+                        "description": "",
+                        "price": "€5.90"
                     },
                     {
                         "name": "Champ High - Pipe (Cosmos & Leaf)",
@@ -644,34 +644,14 @@
                         "price": "€6.00"
                     },
                     {
-                        "name": "K. Haring - Spoon Pipe",
+                        "name": "Dreamliner tar catching dry pipe",
                         "description": "",
-                        "price": "€50.00"
-                    },
-                    {
-                        "name": "Marley - natural water pipe",
-                        "description": "",
-                        "price": "€220.00"
-                    },
-                    {
-                        "name": "Marley Natural - Steam Roller Smoked glass",
-                        "description": "",
-                        "price": "€55.00"
-                    },
-                    {
-                        "name": "Marley Natural - Taster smoked glass",
-                        "description": "",
-                        "price": "€29.00"
+                        "price": "€6.00"
                     },
                     {
                         "name": "Black Leaf - Glass Oil Pipe",
                         "description": "",
                         "price": "€7.50"
-                    },
-                    {
-                        "name": "Pipe - Glass pipe yellow bee",
-                        "description": "",
-                        "price": "€12.00"
                     },
                     {
                         "name": "Champ High - Pipe (Pool glass black)",
@@ -684,9 +664,9 @@
                         "price": "€7.90"
                     },
                     {
-                        "name": "Black Leaf - Glass Shotgun Smoking Pipe",
+                        "name": "Pipe - Glass pipe yellow bee",
                         "description": "",
-                        "price": "€5.00"
+                        "price": "€12.00"
                     },
                     {
                         "name": "Breit Drops Hand Pipe with Filter Adapter",
@@ -694,19 +674,39 @@
                         "price": "€12.00"
                     },
                     {
-                        "name": "Black Leaf Oil Pipe 120mm",
-                        "description": "",
-                        "price": "€5.90"
+                        "name": "Champ High - Glass Original Pipe",
+                        "description": "Clear",
+                        "price": "€17.00"
                     },
                     {
-                        "name": "Smoking Pipe Wood dark 80mm",
-                        "description": "",
-                        "price": "€4.90"
+                        "name": "Black Leaf - Gandalf smoking pipe",
+                        "description": "medium amber",
+                        "price": "€18.90"
                     },
                     {
-                        "name": "Dreamliner tar catching dry pipe",
+                        "name": "Champ High - Pills Pipe colors",
+                        "description": "Various Colours",
+                        "price": "€20.00"
+                    },
+                    {
+                        "name": "Marley Natural - Taster smoked glass",
                         "description": "",
-                        "price": "€6.00"
+                        "price": "€29.00"
+                    },
+                    {
+                        "name": "K. Haring - Spoon Pipe",
+                        "description": "",
+                        "price": "€50.00"
+                    },
+                    {
+                        "name": "Marley Natural - Steam Roller Smoked glass",
+                        "description": "",
+                        "price": "€55.00"
+                    },
+                    {
+                        "name": "Marley - natural water pipe",
+                        "description": "",
+                        "price": "€220.00"
                     }
                 ]
             },
@@ -715,9 +715,44 @@
                 "id": "bong",
                 "items": [
                     {
-                        "name": "Bong - Alien Octopus Glass-Silicone",
-                        "description": "20cm",
-                        "price": "€27.50"
+                        "name": "Mini Bar Glass bottle Bong",
+                        "description": "",
+                        "price": "€5.50"
+                    },
+                    {
+                        "name": "Champ High - Skull Silicone Bong Mix Colors",
+                        "description": "",
+                        "price": "€9.90"
+                    },
+                    {
+                        "name": "Crystal Bubbler glass pipe",
+                        "description": "blue",
+                        "price": "€12.90"
+                    },
+                    {
+                        "name": "Crystal Bubbler glass pipe black",
+                        "description": "",
+                        "price": "€12.90"
+                    },
+                    {
+                        "name": "Bong - BREIT Ice bong jetstream",
+                        "description": "",
+                        "price": "€15.00"
+                    },
+                    {
+                        "name": "Black Leaf Oil Bong with Banger Red 180mm",
+                        "description": "",
+                        "price": "€18.00"
+                    },
+                    {
+                        "name": "Black leaf - Bong SCULPY glass BLUE",
+                        "description": "",
+                        "price": "€18.90"
+                    },
+                    {
+                        "name": "Bong - Space hero Grey Silicone bong",
+                        "description": "15cm",
+                        "price": "€20.00"
                     },
                     {
                         "name": "Bong - Black Leaf glass",
@@ -730,89 +765,9 @@
                         "price": "€20.90"
                     },
                     {
-                        "name": "Bong - Black leaf percolator icebong",
-                        "description": "Blue",
-                        "price": "€30.90"
-                    },
-                    {
-                        "name": "Bong - BREIT Ice bong jetstream",
-                        "description": "",
-                        "price": "€15.00"
-                    },
-                    {
-                        "name": "Bong - Pop art Glass",
-                        "description": "26 cm",
-                        "price": "€32.50"
-                    },
-                    {
-                        "name": "Bong - Space hero Grey Silicone bong",
-                        "description": "15cm",
-                        "price": "€20.00"
-                    },
-                    {
-                        "name": "Bong - Spaceman White silicone bong",
-                        "description": "15cm",
-                        "price": "€25.00"
-                    },
-                    {
-                        "name": "Bong - Weed Vuittton Classy Glass Bong",
-                        "description": "32cm",
-                        "price": "€89.00"
-                    },
-                    {
-                        "name": "Crystal Bubbler glass pipe",
-                        "description": "blue",
-                        "price": "€12.90"
-                    },
-                    {
-                        "name": "Eyce beaker",
-                        "description": "Various Colours",
-                        "price": "€70.00"
-                    },
-                    {
-                        "name": "Higher standards - rig kit",
-                        "description": "Complete Kit",
-                        "price": "€170.00"
-                    },
-                    {
-                        "name": "K Haring - Bubbler",
-                        "description": "",
-                        "price": "€150.99"
-                    },
-                    {
-                        "name": "K. Haring - concentrate rig",
-                        "description": "",
-                        "price": "€180.00"
-                    },
-                    {
-                        "name": "Marley - natural bubbler",
-                        "description": "",
-                        "price": "€100.00"
-                    },
-                    {
-                        "name": "Marley Natural - Water Pipe Smoked Glass",
-                        "description": "",
-                        "price": "€140.00"
-                    },
-                    {
-                        "name": "Chill Pipe - Stainless Steel",
-                        "description": "",
-                        "price": "€129.00"
-                    },
-                    {
-                        "name": "Chill Pipe - Blue Gloss",
-                        "description": "",
-                        "price": "€129.00"
-                    },
-                    {
                         "name": "Bong - BREIT Ice bong with kickhole",
                         "description": "",
                         "price": "€20.90"
-                    },
-                    {
-                        "name": "Bong - Black leaf percolator icebong with kickhole",
-                        "description": "",
-                        "price": "€35.90"
                     },
                     {
                         "name": "Bong - BREIT ZickZack with diffuser chillum",
@@ -820,9 +775,9 @@
                         "price": "€20.90"
                     },
                     {
-                        "name": "Crystal Bubbler glass pipe black",
-                        "description": "",
-                        "price": "€12.90"
+                        "name": "Bong - Spaceman White silicone bong",
+                        "description": "15cm",
+                        "price": "€25.00"
                     },
                     {
                         "name": "Black Leaf - BREITseite cylinderbong ICE",
@@ -830,14 +785,29 @@
                         "price": "€25.90"
                     },
                     {
+                        "name": "Bong - Alien Octopus Glass-Silicone",
+                        "description": "20cm",
+                        "price": "€27.50"
+                    },
+                    {
+                        "name": "Bong - Black leaf percolator icebong",
+                        "description": "Blue",
+                        "price": "€30.90"
+                    },
+                    {
                         "name": "Black Leaf - Glass cup bong SEX + WEED",
                         "description": "",
                         "price": "€30.90"
                     },
                     {
-                        "name": "Black Leaf - Zombie chaser Machine bong w. kickhole",
+                        "name": "Bong - Pop art Glass",
+                        "description": "26 cm",
+                        "price": "€32.50"
+                    },
+                    {
+                        "name": "Bong - Black leaf percolator icebong with kickhole",
                         "description": "",
-                        "price": "€48.90"
+                        "price": "€35.90"
                     },
                     {
                         "name": "Black Leaf - Beaker Bong Mini Ice Pink",
@@ -853,6 +823,31 @@
                         "name": "Black Leaf - Beaker Bong Mini Ice Blue",
                         "description": "",
                         "price": "€36.90"
+                    },
+                    {
+                        "name": "Rick and Morty Girl Handcrafted Glass Bong 25cm",
+                        "description": "",
+                        "price": "€45.00"
+                    },
+                    {
+                        "name": "Rick and Morty Guy Handcrafted Glass Bong 25cm",
+                        "description": "",
+                        "price": "€45.00"
+                    },
+                    {
+                        "name": "Black Leaf - Nautilus 22' bong w slit diffuser blue",
+                        "description": "",
+                        "price": "€48.00"
+                    },
+                    {
+                        "name": "Black Leaf Bong UFO Percolater Bong With Banger",
+                        "description": "",
+                        "price": "€48.00"
+                    },
+                    {
+                        "name": "Black Leaf - Zombie chaser Machine bong w. kickhole",
+                        "description": "",
+                        "price": "€48.90"
                     },
                     {
                         "name": "Black Leaf - Glass cylinder bong skull",
@@ -875,39 +870,9 @@
                         "price": "€48.90"
                     },
                     {
-                        "name": "Rick and Morty Girl Handcrafted Glass Bong 25cm",
-                        "description": "",
-                        "price": "€45.00"
-                    },
-                    {
-                        "name": "Rick and Morty Guy Handcrafted Glass Bong 25cm",
-                        "description": "",
-                        "price": "€45.00"
-                    },
-                    {
-                        "name": "Champ High - Skull Silicone Bong Mix Colors",
-                        "description": "",
-                        "price": "€9.90"
-                    },
-                    {
-                        "name": "Black Leaf - Nautilus 22' bong w slit diffuser blue",
-                        "description": "",
-                        "price": "€48.00"
-                    },
-                    {
-                        "name": "Black Leaf Bong UFO Percolater Bong With Banger",
-                        "description": "",
-                        "price": "€48.00"
-                    },
-                    {
-                        "name": "Black Leaf Oil Bong with Banger Red 180mm",
-                        "description": "",
-                        "price": "€18.00"
-                    },
-                    {
-                        "name": "Black leaf - Bong SCULPY glass BLUE",
-                        "description": "",
-                        "price": "€18.90"
+                        "name": "Eyce beaker",
+                        "description": "Various Colours",
+                        "price": "€70.00"
                     },
                     {
                         "name": "Eyce silicone dab rig",
@@ -915,9 +880,44 @@
                         "price": "€70.00"
                     },
                     {
-                        "name": "Mini Bar Glass bottle Bong",
+                        "name": "Bong - Weed Vuittton Classy Glass Bong",
+                        "description": "32cm",
+                        "price": "€89.00"
+                    },
+                    {
+                        "name": "Marley - natural bubbler",
                         "description": "",
-                        "price": "€5.50"
+                        "price": "€100.00"
+                    },
+                    {
+                        "name": "Chill Pipe - Stainless Steel",
+                        "description": "",
+                        "price": "€129.00"
+                    },
+                    {
+                        "name": "Chill Pipe - Blue Gloss",
+                        "description": "",
+                        "price": "€129.00"
+                    },
+                    {
+                        "name": "Marley Natural - Water Pipe Smoked Glass",
+                        "description": "",
+                        "price": "€140.00"
+                    },
+                    {
+                        "name": "K Haring - Bubbler",
+                        "description": "",
+                        "price": "€150.99"
+                    },
+                    {
+                        "name": "Higher standards - rig kit",
+                        "description": "Complete Kit",
+                        "price": "€170.00"
+                    },
+                    {
+                        "name": "K. Haring - concentrate rig",
+                        "description": "",
+                        "price": "€180.00"
                     }
                 ]
             }
@@ -931,9 +931,24 @@
                 "id": "pure-cbd",
                 "items": [
                     {
-                        "name": "Pure CBD - CBN Oil 5% CBN - 2.5% CBD",
+                        "name": "Pure CBD Lip Balm",
                         "description": "",
-                        "price": "€45.00"
+                        "price": "€9.90"
+                    },
+                    {
+                        "name": "Pure CBD Heating Balm",
+                        "description": "",
+                        "price": "€17.90"
+                    },
+                    {
+                        "name": "Pure CBD Restoring Balm 45 ml/400 Mg CBD",
+                        "description": "",
+                        "price": "€19.90"
+                    },
+                    {
+                        "name": "Pure CBD - Muscle & Joint rescue cream",
+                        "description": "",
+                        "price": "€24.90"
                     },
                     {
                         "name": "Pure CBD Balm 50ml/ 750Mg CBD",
@@ -946,24 +961,19 @@
                         "price": "€29.90"
                     },
                     {
-                        "name": "Pure CBD Restoring Balm 45 ml/400 Mg CBD",
+                        "name": "Pure CBD Oil 5%",
                         "description": "",
-                        "price": "€19.90"
+                        "price": "€35.00"
+                    },
+                    {
+                        "name": "Pure CBD - CBN Oil 5% CBN - 2.5% CBD",
+                        "description": "",
+                        "price": "€45.00"
                     },
                     {
                         "name": "Pure CBD - CBG Oil 5% CBG-2.5% CBD",
                         "description": "",
                         "price": "€45.00"
-                    },
-                    {
-                        "name": "Pure CBD Heating Balm",
-                        "description": "",
-                        "price": "€17.90"
-                    },
-                    {
-                        "name": "Pure CBD Lip Balm",
-                        "description": "",
-                        "price": "€9.90"
                     },
                     {
                         "name": "Pure CBD Oil 10%",
@@ -984,16 +994,6 @@
                         "name": "Pure CBD Oil 30%",
                         "description": "",
                         "price": "€139.00"
-                    },
-                    {
-                        "name": "Pure CBD Oil 5%",
-                        "description": "",
-                        "price": "€35.00"
-                    },
-                    {
-                        "name": "Pure CBD - Muscle & Joint rescue cream",
-                        "description": "",
-                        "price": "€24.90"
                     }
                 ]
             }
