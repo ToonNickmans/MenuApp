@@ -1,54 +1,221 @@
 document.addEventListener('DOMContentLoaded', function() {
+    let allMenusData = [];
+    let currentMenuIndex = 0;
+
     const menuContainer = document.getElementById('menu-container');
-    const menuTitleElement = document.getElementById('menu-title'); // Uses the h1 tag
+    const mainMenuNavBar = document.getElementById('category-nav');
+    const searchInput = document.getElementById('searchInput');
+    const menuTitleElement = document.getElementById('menu-title');
+    const menuIndicatorsContainer = document.getElementById('menu-indicators');
 
-    // Clear previous content for testing
-    if(menuContainer) menuContainer.innerHTML = '';
-    if(menuTitleElement) menuTitleElement.textContent = 'Attempting to Load Menu...';
-
-    console.log('TEST SCRIPT: DOMContentLoaded, starting fetch for menu-data.json');
-
+    // --- 1. FETCH MENU DATA FROM JSON FILE ---
     fetch('menu-data.json')
         .then(response => {
-            console.log('TEST SCRIPT: Fetch response received. Status:', response.status);
             if (!response.ok) {
-                console.error('TEST SCRIPT: Network response was NOT ok.', response);
-                // Attempt to get text even on error to see if it's an HTML error page
-                return response.text().then(text => {
-                    console.error('TEST SCRIPT: Error response text:', text);
-                    throw new Error(`Network response was not ok: ${response.status} ${response.statusText}. Response body (text): ${text.substring(0, 200)}...`);
-                });
+                throw new Error('Network response was not ok: ' + response.statusText);
             }
-            console.log('TEST SCRIPT: Network response OK. Attempting to parse JSON.');
             return response.json();
         })
         .then(data => {
-            console.log('TEST SCRIPT: JSON parsed successfully. Data:', data);
-            if (menuTitleElement) {
-                menuTitleElement.textContent = 'Menu Data Loaded Successfully!';
-            }
-            if (menuContainer) {
-                if (data && data.length > 0) {
-                    menuContainer.innerHTML = `<p>Found ${data.length} menu(s) in menu-data.json:</p><ul>`;
-                    data.forEach(menu => {
-                        menuContainer.innerHTML += `<li>${menu.name || 'Unnamed Menu'}</li>`;
-                    });
-                    menuContainer.innerHTML += `</ul>`;
-                } else {
-                    menuContainer.innerHTML = '<p>Menu data loaded, but it seems to be empty or not in the expected array format.</p>';
-                    console.warn('TEST SCRIPT: Data received but not in expected format or empty:', data);
-                }
+            allMenusData = data;
+            if (allMenusData && allMenusData.length > 0) {
+                populateMainMenuNavigationBar();
+                displayCurrentMenu(); // Initial display
+            } else {
+                console.error('Menu data loaded is empty or invalid.');
+                menuContainer.innerHTML = '<p>Menu data could not be loaded or is empty.</p>';
             }
         })
         .catch(error => {
-            console.error('TEST SCRIPT: CATCH BLOCK - Error fetching or parsing menu data:', error.message, error);
-            if (menuTitleElement) {
-                menuTitleElement.textContent = 'Error Loading Menu!';
+            console.error('Error fetching or parsing menu data:', error);
+            menuContainer.innerHTML = '<p>Sorry, there was an error loading the menu. Please try again later.</p>';
+        });
+
+    // --- 2. POPULATE MAIN MENU NAVIGATION BAR ---
+    function populateMainMenuNavigationBar() {
+        if (!allMenusData || allMenusData.length === 0) return;
+        mainMenuNavBar.innerHTML = '';
+
+        allMenusData.forEach((menu, index) => {
+            const menuButton = document.createElement('button');
+            menuButton.textContent = menu.name;
+            menuButton.setAttribute('data-menu-index', index);
+
+            menuButton.addEventListener('click', () => {
+                if (index === currentMenuIndex) return;
+                currentMenuIndex = index;
+                searchInput.value = '';
+                displayCurrentMenu(searchInput.value); // Simplified: will use fade
+            });
+            mainMenuNavBar.appendChild(menuButton);
+        });
+    }
+
+    // --- 3. HELPER TO POPULATE MENU CONTENT (CATEGORIES AS H2, ITEMS WITH IMAGES) ---
+    function populateMenuContent(currentMenu, filterText = '') {
+        if (menuTitleElement) {
+            menuTitleElement.textContent = currentMenu.name;
+        }
+        menuContainer.innerHTML = '';
+
+        let hasVisibleItemsOverall = false;
+        const normalizedFilterText = filterText.toLowerCase();
+
+        if (!currentMenu.categories || currentMenu.categories.length === 0) {
+            menuContainer.innerHTML = '<p>This menu has no items or categories yet.</p>';
+            return;
+        }
+
+        currentMenu.categories.forEach(category => {
+            const categorySection = document.createElement('div');
+            categorySection.classList.add('category-section');
+            categorySection.id = category.id;
+
+            const categoryTitle = document.createElement('h2');
+            categoryTitle.textContent = category.category;
+            categorySection.appendChild(categoryTitle);
+
+            let itemsRenderedInCategory = 0;
+            if (category.items && category.items.length > 0) {
+                category.items.forEach(item => {
+                    if (
+                        filterText === '' ||
+                        item.name.toLowerCase().includes(normalizedFilterText) ||
+                        (item.description && item.description.toLowerCase().includes(normalizedFilterText))
+                    ) {
+                        const menuItemDiv = document.createElement('div');
+                        menuItemDiv.classList.add('menu-item');
+
+                        if (item.image && item.image.trim() !== "") {
+                            const imgElement = document.createElement('img');
+                            imgElement.src = item.image;
+                            imgElement.alt = item.name;
+                            imgElement.classList.add('menu-item-image');
+                            menuItemDiv.appendChild(imgElement);
+                        }
+
+                        const itemName = document.createElement('h3');
+                        itemName.textContent = item.name;
+                        const itemPrice = document.createElement('span');
+                        itemPrice.classList.add('price');
+                        itemPrice.textContent = item.price;
+                        const itemDescription = document.createElement('p');
+                        itemDescription.textContent = item.description;
+
+                        itemName.appendChild(itemPrice);
+                        menuItemDiv.appendChild(itemName);
+                        menuItemDiv.appendChild(itemDescription);
+                        categorySection.appendChild(menuItemDiv);
+                        itemsRenderedInCategory++;
+                        hasVisibleItemsOverall = true;
+                    }
+                });
             }
-            if (menuContainer) {
-                menuContainer.innerHTML = `<p><strong>Failed to load menu data.</strong> Please check the browser console for more details.</p><p>Error message: ${error.message}</p>`;
+
+            if (itemsRenderedInCategory > 0) {
+                menuContainer.appendChild(categorySection);
+            } else if (!filterText && (!category.items || category.items.length === 0)) {
+                categorySection.innerHTML += '<p>No items in this category.</p>';
+                menuContainer.appendChild(categorySection);
             }
         });
 
-    console.log('TEST SCRIPT: Fetch initiated. Script execution continues...');
+        if (!hasVisibleItemsOverall && filterText) {
+            menuContainer.innerHTML = '<p>No items match your search in this menu.</p>';
+        } else if (!hasVisibleItemsOverall && !filterText &&
+                   (currentMenu.categories.length === 0 || currentMenu.categories.every(c => !c.items || c.items.length === 0))) {
+            menuContainer.innerHTML = '<p>This menu currently has no items listed.</p>';
+        }
+    }
+
+    // --- 4. DISPLAY CURRENT MENU (Simplified Fade Animation) ---
+    function displayCurrentMenu(filterText = '') { // slideParams removed for simplicity
+        if (!allMenusData || allMenusData.length === 0 || !allMenusData[currentMenuIndex]) {
+            console.error("Menu data or current menu is not available for display.");
+            menuContainer.innerHTML = '<p>Error loading menu content.</p>';
+            return;
+        }
+        const currentMenu = allMenusData[currentMenuIndex];
+
+        // Update active state in the main menu navigation bar
+        const menuButtons = mainMenuNavBar.querySelectorAll('button');
+        menuButtons.forEach(button => {
+            if (parseInt(button.getAttribute('data-menu-index')) === currentMenuIndex) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        // Simple fade transition
+        menuContainer.style.opacity = '0'; // Start fade out
+        // Ensure transform is reset if complex slide left it off-screen
+        menuContainer.style.transform = 'translateX(0)'; 
+
+        setTimeout(() => { // Allow opacity:0 to take effect before content update
+            populateMenuContent(currentMenu, filterText);
+            if (menuIndicatorsContainer) {
+                updateMenuIndicators();
+            }
+            
+            requestAnimationFrame(() => { // Fade in the new content
+                menuContainer.style.opacity = '1';
+            });
+        }, 150); // Adjust delay as needed (e.g., half of your CSS opacity transition duration)
+    }
+
+    // --- 5. UPDATE MENU INDICATORS (dots) ---
+    function updateMenuIndicators() {
+        if (!menuIndicatorsContainer || !allMenusData || allMenusData.length === 0) return;
+        menuIndicatorsContainer.innerHTML = '';
+        allMenusData.forEach((menu, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('indicator-dot');
+            if (index === currentMenuIndex) {
+                dot.classList.add('active');
+            }
+            dot.addEventListener('click', () => {
+                if (index === currentMenuIndex) return;
+                currentMenuIndex = index;
+                searchInput.value = '';
+                displayCurrentMenu(searchInput.value); // Simplified: will use fade
+            });
+            menuIndicatorsContainer.appendChild(dot);
+        });
+    }
+
+    // --- 6. SWIPE HANDLING ---
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeThreshold = 50;
+
+    menuContainer.addEventListener('touchstart', function(event) {
+        touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+
+    menuContainer.addEventListener('touchend', function(event) {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (!allMenusData || allMenusData.length <= 1) return;
+        const deltaX = touchEndX - touchStartX;
+
+        if (Math.abs(deltaX) > swipeThreshold) {
+            if (deltaX > 0) { // Swipe Right
+                currentMenuIndex = (currentMenuIndex - 1 + allMenusData.length) % allMenusData.length;
+            } else { // Swipe Left
+                currentMenuIndex = (currentMenuIndex + 1) % allMenusData.length;
+            }
+            searchInput.value = '';
+            displayCurrentMenu(searchInput.value); // Simplified: will use fade
+        }
+    }
+
+    // --- 7. SEARCH FUNCTIONALITY ---
+    searchInput.addEventListener('input', (e) => {
+        if (!allMenusData || allMenusData.length === 0) return;
+        displayCurrentMenu(e.target.value); // Search updates with a fade
+    });
 });
