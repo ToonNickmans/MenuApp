@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             allMenusData = data;
             if (allMenusData && allMenusData.length > 0) {
                 populateMainMenuNavigationBar();
-                displayCurrentMenu();
+                displayCurrentMenu(); // Initial display
             } else {
                 console.error('Menu data loaded is empty or invalid.');
                 menuContainer.innerHTML = '<p>Menu data could not be loaded or is empty.</p>';
@@ -43,16 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             menuButton.addEventListener('click', () => {
                 if (index === currentMenuIndex) return;
-
-                let slideParams = null;
-                if (index > currentMenuIndex) {
-                    slideParams = { outClass: 'menu-slide-out-left', inClass: 'menu-slide-in-from-right' };
-                } else {
-                    slideParams = { outClass: 'menu-slide-out-right', inClass: 'menu-slide-in-from-left' };
-                }
                 currentMenuIndex = index;
                 searchInput.value = '';
-                displayCurrentMenu(searchInput.value, slideParams);
+                // Call displayCurrentMenu without slideParams for a simple fade
+                displayCurrentMenu(searchInput.value); 
             });
             mainMenuNavBar.appendChild(menuButton);
         });
@@ -63,14 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (menuTitleElement) {
             menuTitleElement.textContent = currentMenu.name;
         }
-        menuContainer.innerHTML = '';
+        menuContainer.innerHTML = ''; // Clear old items from main container
 
         let hasVisibleItemsOverall = false;
         const normalizedFilterText = filterText.toLowerCase();
 
         if (!currentMenu.categories || currentMenu.categories.length === 0) {
             menuContainer.innerHTML = '<p>This menu has no items or categories yet.</p>';
-            return;
+            return; 
         }
 
         currentMenu.categories.forEach(category => {
@@ -135,8 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- 4. DISPLAY CURRENT MENU (Handles Animations, Calls Content Population) ---
-    function displayCurrentMenu(filterText = '', slideParams = null) {
+    // --- 4. DISPLAY CURRENT MENU (Simplified Fade Animation - REVERTED TO THIS VERSION FOR TESTING) ---
+    function displayCurrentMenu(filterText = '') { // slideParams argument removed for this simplified version
         if (!allMenusData || allMenusData.length === 0 || !allMenusData[currentMenuIndex]) {
             console.error("Menu data or current menu is not available for display.");
             menuContainer.innerHTML = '<p>Error loading menu content.</p>';
@@ -144,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         const currentMenu = allMenusData[currentMenuIndex];
 
+        // Update active state in the main menu navigation bar
         const menuButtons = mainMenuNavBar.querySelectorAll('button');
         menuButtons.forEach(button => {
             if (parseInt(button.getAttribute('data-menu-index')) === currentMenuIndex) {
@@ -153,44 +148,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        const updateAndAnimateIn = () => {
+        // Simple fade transition
+        menuContainer.style.opacity = '0'; 
+        // Ensure transform is reset in case previous complex slide logic left it off-screen
+        menuContainer.style.transform = 'translateX(0)'; 
+
+        setTimeout(() => { 
             populateMenuContent(currentMenu, filterText);
             if (menuIndicatorsContainer) {
                 updateMenuIndicators();
             }
-
-            if (slideParams && slideParams.inClass) {
-                requestAnimationFrame(() => { 
-                    menuContainer.classList.remove(slideParams.inClass);
-                });
-            } else {
-                requestAnimationFrame(() => {
-                    menuContainer.style.opacity = '1';
-                });
-            }
-        };
-
-        if (slideParams && slideParams.outClass) {
-            menuContainer.classList.remove('menu-slide-in-from-left', 'menu-slide-in-from-right');
-            menuContainer.classList.add(slideParams.outClass);
-
-            menuContainer.addEventListener('transitionend', function onSlideOutComplete() {
-                menuContainer.removeEventListener('transitionend', onSlideOutComplete);
-                menuContainer.style.transition = 'none';
-                menuContainer.classList.remove(slideParams.outClass);
-                if (slideParams.inClass) {
-                    menuContainer.classList.add(slideParams.inClass);
-                }
-                menuContainer.offsetHeight; 
-                menuContainer.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
-                updateAndAnimateIn();
-            }, { once: true });
-        } else {
-            menuContainer.style.opacity = '0'; 
-            setTimeout(() => {
-                updateAndAnimateIn();
-            }, 50); 
-        }
+            
+            requestAnimationFrame(() => { 
+                menuContainer.style.opacity = '1';
+            });
+        }, 150); // This delay should be roughly half your CSS opacity transition duration
     }
 
     // --- 5. UPDATE MENU INDICATORS (dots) ---
@@ -205,16 +177,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             dot.addEventListener('click', () => {
                 if (index === currentMenuIndex) return;
-
-                let slideParams = null;
-                if (index > currentMenuIndex) {
-                    slideParams = { outClass: 'menu-slide-out-left', inClass: 'menu-slide-in-from-right' };
-                } else {
-                    slideParams = { outClass: 'menu-slide-out-right', inClass: 'menu-slide-in-from-left' };
-                }
                 currentMenuIndex = index;
                 searchInput.value = '';
-                displayCurrentMenu(searchInput.value, slideParams);
+                // Call displayCurrentMenu without slideParams for a simple fade
+                displayCurrentMenu(searchInput.value); 
             });
             menuIndicatorsContainer.appendChild(dot);
         });
@@ -223,18 +189,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 6. SWIPE HANDLING ---
     let touchStartX = 0;
     let touchEndX = 0;
-    let touchStartY = 0; // Added to record Y start
-    let touchEndY = 0;   // Added to record Y end
-    const swipeThreshold = 50; // Minimum horizontal pixels for a swipe
+    let touchStartY = 0; 
+    let touchEndY = 0;   
+    const swipeThreshold = 50; 
 
     menuContainer.addEventListener('touchstart', function(event) {
         touchStartX = event.changedTouches[0].screenX;
-        touchStartY = event.changedTouches[0].screenY; // Record Y start
+        touchStartY = event.changedTouches[0].screenY; 
     }, { passive: true });
 
     menuContainer.addEventListener('touchend', function(event) {
         touchEndX = event.changedTouches[0].screenX;
-        touchEndY = event.changedTouches[0].screenY;   // Record Y end
+        touchEndY = event.changedTouches[0].screenY;   
         handleSwipe();
     });
 
@@ -242,27 +208,24 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!allMenusData || allMenusData.length <= 1) return; 
 
         const deltaX = touchEndX - touchStartX;
-        const deltaY = touchEndY - touchStartY; // Calculate vertical distance
-        let slideParams = null;
-
-        // Only trigger horizontal swipe if horizontal movement is significant AND
-        // greater than vertical movement (to avoid triggering on vertical scrolls)
-        if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaX) > Math.abs(deltaY) * 1.5) { // Factor of 1.5 makes it stricter
+        const deltaY = touchEndY - touchStartY; 
+        
+        if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaX) > Math.abs(deltaY) * 1.5) { 
             if (deltaX > 0) { 
-                slideParams = { outClass: 'menu-slide-out-right', inClass: 'menu-slide-in-from-left' };
                 currentMenuIndex = (currentMenuIndex - 1 + allMenusData.length) % allMenusData.length;
             } else { 
-                slideParams = { outClass: 'menu-slide-out-left', inClass: 'menu-slide-in-from-right' };
                 currentMenuIndex = (currentMenuIndex + 1) % allMenusData.length;
             }
             searchInput.value = ''; 
-            displayCurrentMenu(searchInput.value, slideParams);
+            // Call displayCurrentMenu without slideParams for a simple fade
+            displayCurrentMenu(searchInput.value); 
         }
     }
 
     // --- 7. SEARCH FUNCTIONALITY ---
     searchInput.addEventListener('input', (e) => {
         if (!allMenusData || allMenusData.length === 0) return;
-        displayCurrentMenu(e.target.value, null); 
+        // Call displayCurrentMenu without slideParams for a simple fade
+        displayCurrentMenu(e.target.value); 
     });
 });
