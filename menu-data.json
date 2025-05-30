@@ -319,42 +319,7 @@
                     }
                 ]
             },
-            {
-                "category": "HAPPEASE",
-                "id": "happease",
-                "items": [
-                    {
-                        "name": "Ice O Later - Mountain River",
-                        "description": "Ice O Later extract by Happease - Mountain River.",
-                        "price": "€15.00",
-                        "image": ""
-                    },
-                    {
-                        "name": "Ice O Later - Strawberry Field",
-                        "description": "Ice O Later extract by Happease - Strawberry Field.",
-                        "price": "€15.00",
-                        "image": ""
-                    },
-                    {
-                        "name": "Sugar Wax - Mountain River",
-                        "description": "Sugar Wax concentrate by Happease - Mountain River.",
-                        "price": "€33.00",
-                        "image": ""
-                    },
-                    {
-                        "name": "Sugar Wax - Tropical Sunrise",
-                        "description": "Sugar Wax concentrate by Happease - Tropical Sunrise.",
-                        "price": "€33.00",
-                        "image": ""
-                    },
-                    {
-                        "name": "Sugar Wax - Jungle Spirit",
-                        "description": "Sugar Wax concentrate by Happease - Jungle Spirit.",
-                        "price": "€33.00",
-                        "image": ""
-                    }
-                ]
-            }
+            
         ]
     },
     {
