@@ -103,8 +103,8 @@ header h1#menu-title {
     touch-action: pan-y;
     overscroll-behavior-x: contain; /* From previous fix */
     will-change: transform, opacity;  /* From previous fix */
-    transform: translateX(0);     /* Explicit default: centered */
-    opacity: 1;                 /* Explicit default: visible */
+    transform: translateX(0);       /* Explicit default: centered */
+    opacity: 1;                   /* Explicit default: visible */
 }
 
 /* Optional: For initial load or specific fade-only transitions if script uses it */
@@ -182,18 +182,43 @@ header h1#menu-title {
     color: #0056b3;
 }
 
-.menu-item .price {
-    font-weight: bold;
-    color: #28a745;
-    float: right;
+/* ---- NEW STYLES FOR PRODUCT OPTIONS ---- */
+
+/* This is the container for the list of different weights/prices */
+.options-list {
+  margin-top: 15px; /* Adds some space below the product name (h3) */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Creates consistent spacing between each option row */
 }
 
-.menu-item p {
-    margin-bottom: 0;
-    font-size: 0.9em;
-    color: #666;
-    clear: both;
+/* This styles a single row (e.g., "2 g" on the left, "€21.90" on the right) */
+.option-row {
+  display: flex;
+  justify-content: space-between; /* Pushes the description and price apart */
+  align-items: center; /* Vertically aligns them nicely */
+  padding: 4px 0;
+  border-top: 1px solid #f0f0f0; /* A subtle separator line for clarity */
 }
+
+/* Styling the first option row to not have a line above it */
+.option-row:first-child {
+    border-top: none;
+}
+
+/* Styles the description text (e.g., "2 g") */
+.option-description {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Styles the price text (e.g., "€21.90") */
+.option-price {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #28a745; /* Using the same green as your old price style */
+}
+
 
 /* ---- Footer ---- */
 footer {
