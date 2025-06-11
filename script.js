@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (category.items && category.items.length > 0) {
                 category.items.forEach(item => {
                     // **MODIFIED SEARCH LOGIC**
-                    // Check if the product name or any of its options match the search filter.
                     const nameMatches = item.name.toLowerCase().includes(normalizedFilterText);
                     const optionMatches = item.options.some(opt =>
                         opt.description.toLowerCase().includes(normalizedFilterText)
@@ -87,11 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     if (filterText === '' || nameMatches || optionMatches) {
                         // **MODIFIED ITEM RENDERING**
-                        // Create a single container for the product and its options.
                         const productItemDiv = document.createElement('div');
-                        productItemDiv.classList.add('menu-item'); // Using 'menu-item' class for consistency
+                        productItemDiv.classList.add('menu-item');
 
-                        // Image (if available) - logic remains the same
                         if (item.image && item.image.trim() !== "") {
                             const imgElement = document.createElement('img');
                             imgElement.src = item.image;
@@ -100,16 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
                             productItemDiv.appendChild(imgElement);
                         }
 
-                        // Product Name - displayed once at the top
                         const productName = document.createElement('h3');
                         productName.textContent = item.name;
                         productItemDiv.appendChild(productName);
 
-                        // Create a container for the price/description options
                         const optionsContainer = document.createElement('div');
                         optionsContainer.classList.add('options-list');
 
-                        // Loop through the 'options' array for this product
                         item.options.forEach(option => {
                             const optionRow = document.createElement('div');
                             optionRow.classList.add('option-row');
@@ -135,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // This logic to show/hide categories based on content remains largely the same
             if (itemsRenderedInCategory > 0) {
                 menuContainer.appendChild(categorySection);
             } else if (!filterText && (!category.items || category.items.length === 0)) {
@@ -144,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // This logic to handle "no results" messages remains the same
         if (!hasVisibleItemsOverall && filterText) {
             menuContainer.innerHTML = '<p>No items match your search in this menu.</p>';
         } else if (!hasVisibleItemsOverall && !filterText &&
@@ -155,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // --- 4. DISPLAY CURRENT MENU ---
-    // This function remains the same, as the changes were made in populateMenuContent.
     function displayCurrentMenu(filterText = '') {
         if (!allMenusData || allMenusData.length === 0 || !allMenusData[currentMenuIndex]) {
             console.error("Menu data or current menu is not available for display.");
@@ -189,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- 5. UPDATE MENU INDICATORS (dots) ---
-    // This function remains the same.
     function updateMenuIndicators() {
         if (!menuIndicatorsContainer || !allMenusData || allMenusData.length === 0) return;
         menuIndicatorsContainer.innerHTML = '';
@@ -210,7 +200,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- 6. SWIPE HANDLING ---
-    // This function remains the same.
     let touchStartX = 0;
     let touchEndX = 0;
     let touchStartY = 0;
@@ -246,8 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- 7. SEARCH FUNCTIONALITY ---
-    // This function remains the same.
-    searchInput.addEventListener('input', (e). => {
+    searchInput.addEventListener('input', (e) => { // <--- THE FIX IS HERE
         if (!allMenusData || allMenusData.length === 0) return;
         displayCurrentMenu(e.target.value);
     });
