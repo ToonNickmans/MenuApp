@@ -69,17 +69,20 @@ document.addEventListener('DOMContentLoaded', function() {
         currentMenu.categories.forEach(category => {
             const itemsToFilter = category.items || [];
             
+            // **FIXED FILTERING LOGIC**
             const filteredItems = itemsToFilter.filter(item => {
+                if (!item) return false; // Safety check for null/undefined items
                 if (filterText === '') return true;
-                const nameMatches = item.name.toLowerCase().includes(normalizedFilterText);
-                
-                // Check if search text matches in any of the options' descriptions
-                const optionMatches = item.options && item.options.some(opt => 
-                    opt.description.toLowerCase().includes(normalizedFilterText)
-                );
 
-                // Or check the single description if it exists
-                const singleDescriptionMatches = item.description && item.description.toLowerCase().includes(normalizedFilterText);
+                const nameMatches = item.name && typeof item.name === 'string' && item.name.toLowerCase().includes(normalizedFilterText);
+                
+                // Robust check for options
+                const optionMatches = Array.isArray(item.options) ? item.options.some(opt => 
+                    opt && opt.description && typeof opt.description === 'string' && opt.description.toLowerCase().includes(normalizedFilterText)
+                ) : false;
+
+                // Robust check for single description
+                const singleDescriptionMatches = item.description && typeof item.description === 'string' && item.description.toLowerCase().includes(normalizedFilterText);
 
                 return nameMatches || optionMatches || singleDescriptionMatches;
             });
@@ -110,9 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     productName.textContent = item.name;
                     menuItemDiv.appendChild(productName);
 
-                    // **NEW LOGIC: Check for multiple options vs single price**
+                    // Logic to display multiple options or a single price
                     if (item.options && Array.isArray(item.options)) {
-                        // Create list for multiple options
                         const optionsContainer = document.createElement('div');
                         optionsContainer.classList.add('options-list');
 
@@ -134,15 +136,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                         menuItemDiv.appendChild(optionsContainer);
                     } else {
-                        // Fallback to single description/price display
                         const itemDescription = document.createElement('p');
                         itemDescription.textContent = item.description;
                         
-                        // Add the price to the h3 tag for single items
                         const itemPrice = document.createElement('span');
-                        itemPrice.classList.add('price'); // Use a general price class
+                        itemPrice.classList.add('price');
                         itemPrice.textContent = item.price;
-                        productName.appendChild(itemPrice); // Append price to the h3
+                        productName.appendChild(itemPrice);
 
                         menuItemDiv.appendChild(itemDescription);
                     }
