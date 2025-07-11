@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     productName.textContent = item.name;
                     menuItemDiv.appendChild(productName);
 
-                    // All items will now have an 'options' array, so the 'else' block is no longer needed.
+                    // **MODIFIED LOGIC:** All items are now rendered using the options list format for consistency.
                     if (item.options && Array.isArray(item.options)) {
                         const optionsContainer = document.createElement('div');
                         optionsContainer.classList.add('options-list');
