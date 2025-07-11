@@ -8,101 +8,81 @@
                 "items": [
                     {
                         "name": "Lemon Haze",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "1 g",
-                                "price": "€15.00"
-                            },
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            },
-                            {
-                                "description": "5 g",
-                                "price": "€62.50"
-                            }
-                        ]
+                        "description": "1 g",
+                        "price": "€15.00",
+                        "image": ""
                     },
                     {
                         "name": "SoMango",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€21.90"
-                            },
-                            {
-                                "description": "4 g",
-                                "price": "€40.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€21.90",
+                        "image": ""
                     },
                     {
                         "name": "Caramello",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            },
-                            {
-                                "description": "4 g",
-                                "price": "€50.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Chocolope",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            },
-                            {
-                                "description": "4 g",
-                                "price": "€50.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Critical Kush",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            },
-                            {
-                                "description": "4 g",
-                                "price": "€50.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Lemon Haze",
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Super Skunk",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            },
-                            {
-                                "description": "4 g",
-                                "price": "€50.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
-                        "name": "Sour Diesel",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€19.95"
-                            }
-                        ]
+                        "name": "SoMango",
+                        "description": "4 g",
+                        "price": "€40.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Caramello",
+                        "description": "4 g",
+                        "price": "€50.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Chocolope",
+                        "description": "4 g",
+                        "price": "€50.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Critical Kush",
+                        "description": "4 g",
+                        "price": "€50.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Super Skunk",
+                        "description": "4 g",
+                        "price": "€50.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Lemon Haze",
+                        "description": "5 g",
+                        "price": "€62.50",
+                        "image": ""
                     }
                 ]
             },
@@ -111,68 +91,46 @@
                 "id": "janes-garden",
                 "items": [
                     {
-                        "name": "Super Silver Haze",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            },
-                            {
-                                "description": "5 g",
-                                "price": "€57.50"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Blueberry",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Buddha Cheese",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Super Silver Haze",
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "White Widow",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
                     },
                     {
                         "name": "Sour Lemon",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "5 g",
-                                "price": "€57.50"
-                            }
-                        ]
+                        "description": "5 g",
+                        "price": "€57.50",
+                        "image": ""
+                    },
+                    {
+                        "name": "Super Silver Haze",
+                        "description": "5 g",
+                        "price": "€57.50",
+                        "image": ""
                     },
                     {
                         "name": "Gelato",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "5 g",
-                                "price": "€62.50"
-                            }
-                        ]
+                        "description": "5 g",
+                        "price": "€62.50",
+                        "image": ""
                     }
                 ]
             },
@@ -182,95 +140,81 @@
                 "items": [
                     {
                         "name": "Super Haze",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "1 g",
-                                "price": "€10.00"
-                            },
-                            {
-                                "description": "2 g",
-                                "price": "€19.90"
-                            }
-                        ]
+                        "description": "1 g",
+                        "price": "€10.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "GUSH4RS",
+                        "description": "2g",
+                        "price": "€12.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Lemon H4ZE",
+                        "description": "2 g",
+                        "price": "€13.90",
+                        "image": ""
                     },
                     {
                         "name": "Cali",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€14.00"
-                            },
-                            {
-                                "description": "5 g",
-                                "price": "€20.00"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€14.00",
+                        "image": ""
                     },
                     {
                         "name": "Weedy",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€14.00"
-                            },
-                            {
-                                "description": "5 g",
-                                "price": "€20.00"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€14.00",
+                        "image": ""
                     },
                     {
                         "name": "OG Kush",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€19.90"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€19.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Super Haze",
+                        "description": "2 g",
+                        "price": "€19.90",
+                        "image": ""
                     },
                     {
                         "name": "Grass",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "15 g",
-                                "price": "€19.90"
-                            }
-                        ]
+                        "description": "15 g",
+                        "price": "€19.90",
+                        "image": ""
+                    },
+                    {
+                        "name": "Cali",
+                        "description": "5 g",
+                        "price": "€20.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Weedy",
+                        "description": "5 g",
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "Blueberry",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€21.90"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€21.90",
+                        "image": ""
                     },
                     {
                         "name": "Vanilla Kush",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€21.90"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€21.90",
+                        "image": ""
                     },
                     {
                         "name": "Blend",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "20 g",
-                                "price": "€35.00"
-                            }
-                        ]
+                        "description": "20 g",
+                        "price": "€35.00",
+                        "image": ""
                     }
                 ]
             },
@@ -279,34 +223,34 @@
                 "id": "edel-weeds",
                 "items": [
                     {
+                        "name": "Cubes",
+                        "description": "1 g",
+                        "price": "€6.50",
+                        "image": ""
+                    },
+                    {
                         "name": "Blue",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "2 g",
-                                "price": "€15.00"
-                            }
-                        ]
+                        "description": "2 g",
+                        "price": "€15.00",
+                        "image": ""
+                    },
+                    {
+                        "name": "Cubes",
+                        "description": "5 g",
+                        "price": "€17.50",
+                        "image": ""
                     },
                     {
                         "name": "Green",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "10 g",
-                                "price": "€20.00"
-                            }
-                        ]
+                        "description": "10 g",
+                        "price": "€20.00",
+                        "image": ""
                     },
                     {
                         "name": "Blend",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "20 g",
-                                "price": "€30.00"
-                            }
-                        ]
+                        "description": "20 g",
+                        "price": "€30.00",
+                        "image": ""
                     }
                 ]
             },
@@ -316,13 +260,9 @@
                 "items": [
                     {
                         "name": "Black Widow",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "1 g",
-                                "price": "€7.00"
-                            }
-                        ]
+                        "description": "1 g",
+                        "price": "€7.00",
+                        "image": ""
                     }
                 ]
             },
@@ -332,33 +272,21 @@
                 "items": [
                     {
                         "name": "Hawaiian Snow",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€24.20"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "Kosher Kush",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€24.20"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "Skywalker OG",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€24.20"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€24.20",
+                        "image": ""
                     }
                 ]
             }
@@ -373,67 +301,45 @@
                 "items": [
                     {
                         "name": "Sensy - Zero Zero",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "1 g",
-                                "price": "€14.50"
-                            },
-                            {
-                                "description": "2 g",
-                                "price": "€26.00"
-                            }
-                        ]
+                        "description": "1 g",
+                        "price": "€14.50",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - RED",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€24.20"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - GREEN",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€24.20"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - ICE",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€24.20"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - TERP",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€24.20"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€24.20",
+                        "image": ""
                     },
                     {
                         "name": "King Kush - CRUMBLE",
-                        "image": "",
-                        "options": [
-                            {
-                                "description": "3 g",
-                                "price": "€24.20"
-                            }
-                        ]
+                        "description": "3 g",
+                        "price": "€24.20",
+                        "image": ""
+                    },
+                    {
+                        "name": "Sensy - Zero Zero",
+                        "description": "2 g",
+                        "price": "€26.00",
+                        "image": ""
                     }
                 ]
             }
