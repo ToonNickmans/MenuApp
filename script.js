@@ -71,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // **FIXED FILTERING LOGIC**
             const filteredItems = itemsToFilter.filter(item => {
-                if (!item) return false; // Safety check for null/undefined items
+                if (!item) return false; // Safety check for null/undefined items in the array
                 if (filterText === '') return true;
 
                 const nameMatches = item.name && typeof item.name === 'string' && item.name.toLowerCase().includes(normalizedFilterText);
                 
-                // Robust check for options
+                // Robust check for options: ensures item.options is an array before calling .some()
                 const optionMatches = Array.isArray(item.options) ? item.options.some(opt => 
                     opt && opt.description && typeof opt.description === 'string' && opt.description.toLowerCase().includes(normalizedFilterText)
                 ) : false;
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     productName.textContent = item.name;
                     menuItemDiv.appendChild(productName);
 
-                    // Logic to display multiple options or a single price
+                    // Logic to display multiple options or a single price/description
                     if (item.options && Array.isArray(item.options)) {
                         const optionsContainer = document.createElement('div');
                         optionsContainer.classList.add('options-list');
@@ -136,13 +136,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                         menuItemDiv.appendChild(optionsContainer);
                     } else {
+                        // Fallback for single description/price items
                         const itemDescription = document.createElement('p');
                         itemDescription.textContent = item.description;
                         
                         const itemPrice = document.createElement('span');
                         itemPrice.classList.add('price');
                         itemPrice.textContent = item.price;
-                        productName.appendChild(itemPrice);
+                        productName.appendChild(itemPrice); // Append price to the h3
 
                         menuItemDiv.appendChild(itemDescription);
                     }
