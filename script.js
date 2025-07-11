@@ -20,27 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     const groupedItems = new Map();
 
                     category.items.forEach(item => {
-                        // Handle items that are already grouped (like the manually edited 'Cubes')
+                        // If an item is already grouped (like your manual 'Cubes' edit), use it as is.
                         if (item.options && Array.isArray(item.options)) {
-                            groupedItems.set(item.name, item);
-                            return;
+                            // If it's the first time we see this name, add it.
+                            if (!groupedItems.has(item.name)) {
+                                groupedItems.set(item.name, item);
+                            }
+                            return; // Skip further processing for this pre-grouped item
                         }
 
                         if (groupedItems.has(item.name)) {
-                            // This item is a duplicate, add its details to the 'options' of the existing item
+                            // This item is a duplicate of an existing one. Add its details to the 'options' array.
                             const existingItem = groupedItems.get(item.name);
-                            
-                            if (!existingItem.options) {
-                                // This is the first duplicate found, so create the options array
-                                // from the original item's details.
-                                existingItem.options = [{
-                                    description: existingItem.description,
-                                    price: existingItem.price
-                                }];
-                                // Remove the now redundant top-level properties
-                                delete existingItem.description;
-                                delete existingItem.price;
-                            }
                             
                             // Add the new option from the current duplicate item
                             existingItem.options.push({
@@ -48,8 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
                                 price: item.price
                             });
                         } else {
-                            // First time seeing this item name, add it to the map
-                            groupedItems.set(item.name, { ...item }); // Use a copy
+                            // First time seeing this item name.
+                            // Convert it to the new structure with an 'options' array.
+                            const newItem = {
+                                name: item.name,
+                                image: item.image || "",
+                                options: [{
+                                    description: item.description,
+                                    price: item.price
+                                }]
+                            };
+                            groupedItems.set(item.name, newItem);
                         }
                     });
 
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- 3. HELPER TO POPULATE MENU CONTENT (Handles single price AND multiple options) ---
+    // --- 3. HELPER TO POPULATE MENU CONTENT (Handles items with options) ---
     function populateMenuContent(currentMenu, filterText = '') {
         if (menuTitleElement) {
             menuTitleElement.textContent = currentMenu.name;
@@ -128,13 +128,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const nameMatches = item.name && typeof item.name === 'string' && item.name.toLowerCase().includes(normalizedFilterText);
                 
+                // Search logic now only needs to check options, as all items have them.
                 const optionMatches = Array.isArray(item.options) ? item.options.some(opt => 
                     opt && opt.description && typeof opt.description === 'string' && opt.description.toLowerCase().includes(normalizedFilterText)
                 ) : false;
 
-                const singleDescriptionMatches = item.description && typeof item.description === 'string' && item.description.toLowerCase().includes(normalizedFilterText);
-
-                return nameMatches || optionMatches || singleDescriptionMatches;
+                return nameMatches || optionMatches;
             });
 
             if (filteredItems.length > 0) {
@@ -163,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     productName.textContent = item.name;
                     menuItemDiv.appendChild(productName);
 
+                    // All items will now have an 'options' array, so the 'else' block is no longer needed.
                     if (item.options && Array.isArray(item.options)) {
                         const optionsContainer = document.createElement('div');
                         optionsContainer.classList.add('options-list');
@@ -184,16 +184,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             optionsContainer.appendChild(optionRow);
                         });
                         menuItemDiv.appendChild(optionsContainer);
-                    } else {
-                        const itemDescription = document.createElement('p');
-                        itemDescription.textContent = item.description;
-                        
-                        const itemPrice = document.createElement('span');
-                        itemPrice.classList.add('price');
-                        itemPrice.textContent = item.price;
-                        productName.appendChild(itemPrice);
-
-                        menuItemDiv.appendChild(itemDescription);
                     }
                     
                     categorySection.appendChild(menuItemDiv);
