@@ -224,20 +224,14 @@
                 "items": [
                     {
                         "name": "Cubes",
-                        "description": "1 g",
-                        "price": "€6.50",
+                        "description": "Available as 1g (€6.50) or 5g (€17.50)",
+                        "price": "from €6.50",
                         "image": ""
                     },
                     {
                         "name": "Blue",
                         "description": "2 g",
                         "price": "€15.00",
-                        "image": ""
-                    },
-                    {
-                        "name": "Cubes",
-                        "description": "5 g",
-                        "price": "€17.50",
                         "image": ""
                     },
                     {
