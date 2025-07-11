@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error fetching or parsing menu data:', error);
-            menuContainer.innerHTML = `<p>Sorry, there was an error loading the menu. Please check the browser console for details.</p><p>Error: ${error.message}</p>`;
+            menuContainer.innerHTML = '<p>Sorry, there was an error loading the menu. Please try again later.</p>';
         });
 
     // --- 2. POPULATE MAIN MENU NAVIGATION BAR ---
@@ -45,20 +45,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (index === currentMenuIndex) return;
                 currentMenuIndex = index;
                 searchInput.value = '';
-                displayCurrentMenu(); 
+                displayCurrentMenu(searchInput.value);
             });
             mainMenuNavBar.appendChild(menuButton);
         });
     }
 
-    // --- 3. HELPER TO POPULATE MENU CONTENT ---
+    // --- 3. POPULATE MENU CONTENT (MODIFIED FOR NEW JSON STRUCTURE) ---
     function populateMenuContent(currentMenu, filterText = '') {
         if (menuTitleElement) {
             menuTitleElement.textContent = currentMenu.name;
         }
         menuContainer.innerHTML = ''; // Clear old items
 
-        let hasAnyContentAtAll = false;
+        let hasVisibleItemsOverall = false;
         const normalizedFilterText = filterText.toLowerCase();
 
         if (!currentMenu.categories || currentMenu.categories.length === 0) {
@@ -67,62 +67,90 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         currentMenu.categories.forEach(category => {
-            // **FIX APPLIED HERE:** Check if category.items exists. If not, treat as an empty array.
-            const itemsToFilter = category.items || [];
-            
-            const filteredItems = itemsToFilter.filter(item => 
-                filterText === '' ||
-                item.name.toLowerCase().includes(normalizedFilterText) ||
-                (item.description && item.description.toLowerCase().includes(normalizedFilterText))
-            );
+            const categorySection = document.createElement('div');
+            categorySection.classList.add('category-section');
+            categorySection.id = category.id;
 
-            if (filteredItems.length > 0) {
-                hasAnyContentAtAll = true;
-                const categorySection = document.createElement('div');
-                categorySection.classList.add('category-section');
-                categorySection.id = category.id;
+            const categoryTitle = document.createElement('h2');
+            categoryTitle.textContent = category.category;
+            categorySection.appendChild(categoryTitle);
 
-                const categoryTitle = document.createElement('h2');
-                categoryTitle.textContent = category.category;
-                categorySection.appendChild(categoryTitle);
+            let itemsRenderedInCategory = 0;
+            if (category.items && category.items.length > 0) {
+                category.items.forEach(item => {
+                    // **MODIFIED SEARCH LOGIC**
+                    const nameMatches = item.name.toLowerCase().includes(normalizedFilterText);
+                    const optionMatches = item.options.some(opt =>
+                        opt.description.toLowerCase().includes(normalizedFilterText)
+                    );
 
-                filteredItems.forEach(item => {
-                    const menuItemDiv = document.createElement('div');
-                    menuItemDiv.classList.add('menu-item');
+                    if (filterText === '' || nameMatches || optionMatches) {
+                        // **MODIFIED ITEM RENDERING**
+                        const productItemDiv = document.createElement('div');
+                        productItemDiv.classList.add('menu-item');
 
-                    if (item.image && item.image.trim() !== "") {
-                        const imgElement = document.createElement('img');
-                        imgElement.src = item.image;
-                        imgElement.alt = item.name;
-                        imgElement.classList.add('menu-item-image');
-                        menuItemDiv.appendChild(imgElement);
+                        if (item.image && item.image.trim() !== "") {
+                            const imgElement = document.createElement('img');
+                            imgElement.src = item.image;
+                            imgElement.alt = item.name;
+                            imgElement.classList.add('menu-item-image');
+                            productItemDiv.appendChild(imgElement);
+                        }
+
+                        const productName = document.createElement('h3');
+                        productName.textContent = item.name;
+                        productItemDiv.appendChild(productName);
+
+                        const optionsContainer = document.createElement('div');
+                        optionsContainer.classList.add('options-list');
+
+                        item.options.forEach(option => {
+                            const optionRow = document.createElement('div');
+                            optionRow.classList.add('option-row');
+
+                            const optionDescription = document.createElement('span');
+                            optionDescription.classList.add('option-description');
+                            optionDescription.textContent = option.description;
+
+                            const optionPrice = document.createElement('span');
+                            optionPrice.classList.add('option-price');
+                            optionPrice.textContent = option.price;
+
+                            optionRow.appendChild(optionDescription);
+                            optionRow.appendChild(optionPrice);
+                            optionsContainer.appendChild(optionRow);
+                        });
+
+                        productItemDiv.appendChild(optionsContainer);
+                        categorySection.appendChild(productItemDiv);
+                        itemsRenderedInCategory++;
+                        hasVisibleItemsOverall = true;
                     }
-
-                    const itemName = document.createElement('h3');
-                    itemName.textContent = item.name;
-                    const itemPrice = document.createElement('span');
-                    itemPrice.classList.add('price');
-                    itemPrice.textContent = item.price;
-                    const itemDescription = document.createElement('p');
-                    itemDescription.textContent = item.description;
-
-                    itemName.appendChild(itemPrice);
-                    menuItemDiv.appendChild(itemName);
-                    menuItemDiv.appendChild(itemDescription);
-                    categorySection.appendChild(menuItemDiv);
                 });
+            }
+
+            if (itemsRenderedInCategory > 0) {
+                menuContainer.appendChild(categorySection);
+            } else if (!filterText && (!category.items || category.items.length === 0)) {
+                categorySection.innerHTML += '<p>No items in this category.</p>';
                 menuContainer.appendChild(categorySection);
             }
         });
 
-        if (!hasAnyContentAtAll && filterText) {
+        if (!hasVisibleItemsOverall && filterText) {
             menuContainer.innerHTML = '<p>No items match your search in this menu.</p>';
+        } else if (!hasVisibleItemsOverall && !filterText &&
+            (currentMenu.categories.length === 0 || currentMenu.categories.every(c => !c.items || c.items.length === 0))) {
+            menuContainer.innerHTML = '<p>This menu currently has no items listed.</p>';
         }
     }
 
-    // --- 4. DISPLAY CURRENT MENU (Simplified Fade Animation) ---
+
+    // --- 4. DISPLAY CURRENT MENU ---
     function displayCurrentMenu(filterText = '') {
         if (!allMenusData || allMenusData.length === 0 || !allMenusData[currentMenuIndex]) {
+            console.error("Menu data or current menu is not available for display.");
+            menuContainer.innerHTML = '<p>Error loading menu content.</p>';
             return;
         }
         const currentMenu = allMenusData[currentMenuIndex];
@@ -137,14 +165,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         menuContainer.style.opacity = '0';
-        
+        menuContainer.style.transform = 'translateX(0)';
+
         setTimeout(() => {
             populateMenuContent(currentMenu, filterText);
             if (menuIndicatorsContainer) {
                 updateMenuIndicators();
             }
-            menuContainer.style.opacity = '1';
-        }, 150); 
+
+            requestAnimationFrame(() => {
+                menuContainer.style.opacity = '1';
+            });
+        }, 150);
     }
 
     // --- 5. UPDATE MENU INDICATORS (dots) ---
@@ -161,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (index === currentMenuIndex) return;
                 currentMenuIndex = index;
                 searchInput.value = '';
-                displayCurrentMenu();
+                displayCurrentMenu(searchInput.value);
             });
             menuIndicatorsContainer.appendChild(dot);
         });
@@ -170,41 +202,41 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 6. SWIPE HANDLING ---
     let touchStartX = 0;
     let touchEndX = 0;
-    let touchStartY = 0; 
-    let touchEndY = 0;   
-    const swipeThreshold = 50; 
+    let touchStartY = 0;
+    let touchEndY = 0;
+    const swipeThreshold = 50;
 
     menuContainer.addEventListener('touchstart', function(event) {
         touchStartX = event.changedTouches[0].screenX;
-        touchStartY = event.changedTouches[0].screenY; 
+        touchStartY = event.changedTouches[0].screenY;
     }, { passive: true });
 
     menuContainer.addEventListener('touchend', function(event) {
         touchEndX = event.changedTouches[0].screenX;
-        touchEndY = event.changedTouches[0].screenY;   
+        touchEndY = event.changedTouches[0].screenY;
         handleSwipe();
     });
 
     function handleSwipe() {
-        if (!allMenusData || allMenusData.length <= 1) return; 
+        if (!allMenusData || allMenusData.length <= 1) return;
 
         const deltaX = touchEndX - touchStartX;
-        const deltaY = touchEndY - touchStartY; 
-        
-        if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaX) > Math.abs(deltaY) * 1.5) { 
-            if (deltaX > 0) { 
+        const deltaY = touchEndY - touchStartY;
+
+        if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaX) > Math.abs(deltaY) * 1.5) {
+            if (deltaX > 0) {
                 currentMenuIndex = (currentMenuIndex - 1 + allMenusData.length) % allMenusData.length;
-            } else { 
+            } else {
                 currentMenuIndex = (currentMenuIndex + 1) % allMenusData.length;
             }
-            searchInput.value = ''; 
-            displayCurrentMenu(); 
+            searchInput.value = '';
+            displayCurrentMenu(searchInput.value);
         }
     }
 
     // --- 7. SEARCH FUNCTIONALITY ---
-    searchInput.addEventListener('input', (e) => {
+    searchInput.addEventListener('input', (e) => { // <--- THE FIX IS HERE
         if (!allMenusData || allMenusData.length === 0) return;
-        displayCurrentMenu(e.target.value); 
+        displayCurrentMenu(e.target.value);
     });
 });
