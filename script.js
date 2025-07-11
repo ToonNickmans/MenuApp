@@ -8,7 +8,60 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuTitleElement = document.getElementById('menu-title');
     const menuIndicatorsContainer = document.getElementById('menu-indicators');
 
-    // --- 1. FETCH MENU DATA FROM JSON FILE ---
+    // --- NEW: Function to process and group data ---
+    function processAndGroupData(data) {
+        data.forEach(menu => {
+            if (menu.categories) {
+                menu.categories.forEach(category => {
+                    if (!category.items || category.items.length === 0) {
+                        return; // Skip empty categories
+                    }
+
+                    const groupedItems = new Map();
+
+                    category.items.forEach(item => {
+                        // Handle items that are already grouped (like the manually edited 'Cubes')
+                        if (item.options && Array.isArray(item.options)) {
+                            groupedItems.set(item.name, item);
+                            return;
+                        }
+
+                        if (groupedItems.has(item.name)) {
+                            // This item is a duplicate, add its details to the 'options' of the existing item
+                            const existingItem = groupedItems.get(item.name);
+                            
+                            if (!existingItem.options) {
+                                // This is the first duplicate found, so create the options array
+                                // from the original item's details.
+                                existingItem.options = [{
+                                    description: existingItem.description,
+                                    price: existingItem.price
+                                }];
+                                // Remove the now redundant top-level properties
+                                delete existingItem.description;
+                                delete existingItem.price;
+                            }
+                            
+                            // Add the new option from the current duplicate item
+                            existingItem.options.push({
+                                description: item.description,
+                                price: item.price
+                            });
+                        } else {
+                            // First time seeing this item name, add it to the map
+                            groupedItems.set(item.name, { ...item }); // Use a copy
+                        }
+                    });
+
+                    // Replace the original items array with the new, grouped one
+                    category.items = Array.from(groupedItems.values());
+                });
+            }
+        });
+        return data;
+    }
+
+    // --- 1. FETCH AND PROCESS MENU DATA ---
     fetch('menu-data.json')
         .then(response => {
             if (!response.ok) {
@@ -17,10 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
-            allMenusData = data;
+            allMenusData = processAndGroupData(data); // Process data to group items
             if (allMenusData && allMenusData.length > 0) {
                 populateMainMenuNavigationBar();
-                displayCurrentMenu(); // Initial display
+                displayCurrentMenu();
             } else {
                 console.error('Menu data loaded is empty or invalid.');
                 menuContainer.innerHTML = '<p>Menu data could not be loaded or is empty.</p>';
@@ -69,19 +122,16 @@ document.addEventListener('DOMContentLoaded', function() {
         currentMenu.categories.forEach(category => {
             const itemsToFilter = category.items || [];
             
-            // **FIXED FILTERING LOGIC**
             const filteredItems = itemsToFilter.filter(item => {
-                if (!item) return false; // Safety check for null/undefined items in the array
+                if (!item) return false;
                 if (filterText === '') return true;
 
                 const nameMatches = item.name && typeof item.name === 'string' && item.name.toLowerCase().includes(normalizedFilterText);
                 
-                // Robust check for options: ensures item.options is an array before calling .some()
                 const optionMatches = Array.isArray(item.options) ? item.options.some(opt => 
                     opt && opt.description && typeof opt.description === 'string' && opt.description.toLowerCase().includes(normalizedFilterText)
                 ) : false;
 
-                // Robust check for single description
                 const singleDescriptionMatches = item.description && typeof item.description === 'string' && item.description.toLowerCase().includes(normalizedFilterText);
 
                 return nameMatches || optionMatches || singleDescriptionMatches;
@@ -113,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     productName.textContent = item.name;
                     menuItemDiv.appendChild(productName);
 
-                    // Logic to display multiple options or a single price/description
                     if (item.options && Array.isArray(item.options)) {
                         const optionsContainer = document.createElement('div');
                         optionsContainer.classList.add('options-list');
@@ -136,14 +185,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                         menuItemDiv.appendChild(optionsContainer);
                     } else {
-                        // Fallback for single description/price items
                         const itemDescription = document.createElement('p');
                         itemDescription.textContent = item.description;
                         
                         const itemPrice = document.createElement('span');
                         itemPrice.classList.add('price');
                         itemPrice.textContent = item.price;
-                        productName.appendChild(itemPrice); // Append price to the h3
+                        productName.appendChild(itemPrice);
 
                         menuItemDiv.appendChild(itemDescription);
                     }
